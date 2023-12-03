@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/mijuycom/static/css/main.f3380059.css",
-    "main.js": "/mijuycom/static/js/main.275ff93f.js",
-    "index.html": "/mijuycom/index.html",
-    "main.f3380059.css.map": "/mijuycom/static/css/main.f3380059.css.map",
-    "main.275ff93f.js.map": "/mijuycom/static/js/main.275ff93f.js.map"
+    "main.css": "/static/css/main.f3380059.css",
+    "main.js": "/static/js/main.275ff93f.js",
+    "index.html": "/index.html",
+    "main.f3380059.css.map": "/static/css/main.f3380059.css.map",
+    "main.275ff93f.js.map": "/static/js/main.275ff93f.js.map"
   },
   "entrypoints": [
     "static/css/main.f3380059.css",
