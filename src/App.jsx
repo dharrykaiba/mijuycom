@@ -1,15 +1,12 @@
-import './App.scss';
+import Intro from "./components/Intro/Intro";
+import "./App.scss";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-
-      <header className="App-header">
-Proximamente...
-        <img className=".App-logo" src='assets/logotipo_blanco.png' alt='' ></img>
-      </header>
+      <div className="sections">
+        <Intro></Intro>
+      </div>
     </div>
   );
 }
-
-export default App;
