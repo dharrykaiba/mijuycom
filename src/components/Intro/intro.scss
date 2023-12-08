@@ -21,6 +21,7 @@
       align-items: flex-end;
       justify-content: center;
       float: right;
+      margin-top: 10px;
 
       @include mobile {
         align-items: flex-start;
