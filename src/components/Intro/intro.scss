@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .intro {
-  background-color: rgb(22, 22, 22);
+  background-color: #1d1d1b;
   display: flex;
 
   @include mobile {
@@ -15,7 +15,7 @@
     .imgContainer {
       width: 700px;
       height: 700px;
-      //background-color: crimson;
+      background-color: #dd052b;
       border-radius: 50%;
       display: flex;
       align-items: flex-end;
@@ -52,6 +52,7 @@
       h1 {
         font-size: 60px;
         margin: 10px 0;
+        color: #fff;
 
         @include mobile {
           font-size: 40px;
@@ -59,6 +60,7 @@
       }
       h2 {
         font-size: 35px;
+        color: #ffd100;
       }
       h3 {
         font-size: 30px;
@@ -68,7 +70,7 @@
 
         span {
           font-size: inherit;
-          color: crimson;
+          color: #dd052b;
         }
         .ityped-cursor {
           animation: blink 1s infinite;
