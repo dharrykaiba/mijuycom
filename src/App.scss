@@ -1,24 +1,24 @@
-.App{
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  overflow-x: hidden;
-  color: #FFFFFF;
+.App {
   height: 100vh;
-  .sections{
+  background-color:aquamarine;
+  .sections {
     width: 100%;
-    height: calc(100vh - 0px);
-    background-color: lightsalmon;
+    height: calc(100vh - 45px);
+    background-color: #bebe2f;
     position: relative;
-    top: 0px;
+    top: 45px;
+
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     scrollbar-width: none;
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar {
       display: none;
     }
-
-    >*{width: 100vw;
-    height: calc(100vh - 0px);
-  scroll-snap-align: start;}
+    > * {
+      width: 100vw;
+      height: calc(100vh - 45px);
+      scroll-snap-align: start;
+    }
+    
   }
 }
