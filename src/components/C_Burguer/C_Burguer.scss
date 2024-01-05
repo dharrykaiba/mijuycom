@@ -31,11 +31,10 @@
     }
 
     .item {
-      
       width: 80%;
       height: 60%;
       background-color: white;
-      
+
       //border-radius: 20px;
       //display: flex;
       //align-items: center;
@@ -48,12 +47,11 @@
         //margin: 0px 0;
       }
       .imgContainer {
-        
         display: flex;
         align-items: center;
         justify-content: center;
         overflow-y: hidden;
-        
+
         //width: 50vw;
         @include mobile {
           position: relative;
@@ -63,7 +61,7 @@
         }
         img {
           background-color: chartreuse;
-          
+
           //position: relative;
           //align-items: center;
 
@@ -109,17 +107,11 @@
           width: 100%;
           margin-top: 8px;
           display: block;
-          border: none; 
-          color: white; 
-          padding: 14px 28px; 
-          cursor: pointer; 
-          border-radius: 5px; 
-        }
-        span {
-          //font-size: 12px;
-          //font-weight: 600;
-          //text-decoration: underline;
-          //cursor: pointer;
+          border: none;
+          color: white;
+          padding: 14px 28px;
+          cursor: pointer;
+          border-radius: 5px;
         }
       }
     }

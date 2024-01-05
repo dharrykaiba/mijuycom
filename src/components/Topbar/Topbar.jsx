@@ -8,7 +8,7 @@ export default function Topbar({ menuOpen, setMenuOpen }) {
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className="logo">
-            MIJUY.com
+            mijuy.com
           </a>
           <div className="itemContainer1">
             <svg

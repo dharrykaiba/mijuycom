@@ -6,49 +6,55 @@ export default function Carta() {
     {
       id: "1",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Web Design",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+      title: "Pizzas",
+      link: "#c_pizzas",
+      desc: "Escoge la que quieras: Americana, Hawaiana, Pepperoni.",
       img: "./assets/logo_rojo_naranja_blanco-09.jpg",
     },
     {
       id: "2",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Mobile Application",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: "Alitas",
+      link: "#c_alitas",
+      desc: "Disfruta de las deliciosas alitas; Broaster, BBQ, Chimichurri.",
       img: "./assets/logotipo_naranja.png",
     },
     {
       id: "3",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Branding",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: "Hamburguesas",
+      link: "#c_hamburguesas",
+      desc: "Elige una de las mas sabrosas hamburguesas de carne.",
       img: "./assets/logotipo_rojo_redondo.png",
     },
     {
       id: "4",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Branding",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      title: "Otros",
+      link: "#c_otros",
+      desc: "Crocantes papitas, las mejores salchichas, espectaculares salchipapas.",
       img: "./assets/logotipo_rojo_redondo.png",
     },
   ];
 
   return (
     <div className="carta" id="carta">
-      {data.map((d) => (
-        <div className="container">
-          <div className="item">
-            <div className="imgContainer">
-              <img src={d.img} alt="" />
-            </div>
-            <div className="texto">
-              <h2>{d.title}</h2>
-              <p>{d.desc}</p>
-              <button class="btn primary btn-block">Primary</button>
+      <div className="upcontainer">
+        {data.map((d) => (
+          <div className="container">
+            <div className="item">
+              <div className="imgContainer">
+                <img src={d.img} alt="" />
+              </div>
+              <div className="texto">
+                <h2>{d.title}</h2>
+                <p>{d.desc}</p>
+                <a class="btn" href={d.link}>Seleccionar</a>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

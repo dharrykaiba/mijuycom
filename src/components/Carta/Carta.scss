@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .carta {
-  background-color: $mainColor;
+  background-color: $FourColor;
   display: flex;
   //align-items: center;
   //justify-content: center;
@@ -13,113 +13,129 @@
     height: 10vh;
     justify-content: center;
   }
-
-  .container {
-    //height: 80%;
-    //display:flexbox;
-    background-color: aqua;
-
-    //width: 30vw;
+  .upcontainer {
+    //background-color: chocolate;
     display: flex;
     align-items: center;
     justify-content: center;
-
     @include mobile {
+      height: 90%;
+      display: block;
+
       //width: ;
-      height: 30%;
+
       //margin: 0px 0;
     }
+    .container {
+      height: 80%;
 
-    .item {
-      
-      width: 80%;
-      height: 60%;
-      background-color: white;
-      
-      //border-radius: 20px;
-      //display: flex;
-      //align-items: center;
-      //justify-content: center;
+      //background-color: $mainColor;
 
+      //width: 30vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @include mobile {
+        height: 120px;
+        margin: 10px 0px 0px 0;
+
         display: flex;
-        //width: 95%;
-        height: 80%;
+
+        //align-items:center;
+        //width: ;
+
         //margin: 0px 0;
       }
-      .imgContainer {
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow-y: hidden;
-        
-        //width: 50vw;
-        @include mobile {
-          position: relative;
-          width: 400px;
-          //width: 30%;
-          //font-size: 13px;
-        }
-        img {
-          background-color: chartreuse;
-          
-          //position: relative;
-          //align-items: center;
 
-          width: 70vw;
-          transform: rotate(-10deg);
+      .item {
+        width: 80%;
+        height: 80%;
+       //background-color:$mainColor;
+
+        //border-radius: 20px;
+        //display: flex;
+        //align-items: center;
+        //justify-content: center;
+
+        @include mobile {
+          display: flex;
+          height: 100%;
+          //width: 95%;
+          //height: 50px;
+          //margin: 0px 0;
+        }
+        .imgContainer {
+          //background-color: $mainColor;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow-y: hidden;
+
+          //width: 50vw;
           @include mobile {
-            position: relative;
-            width: 100%;
+            //position: relative;
+            width: 400px;
+
             //width: 30%;
             //font-size: 13px;
           }
-        }
-      }
-      .texto {
-        //position: relative;
-        //width: 90vw;
-        overflow-y: hidden;
+          img {
+            //background-color: $mainColor;
 
-        h2 {
+            //position: relative;
+            //align-items: center;
+
+            width: 70vw;
+            transform: rotate(-10deg);
+            @include mobile {
+              //position: relative;
+              //height: 50px;
+              width: 100%;
+              //width: 30%;
+              //font-size: 13px;
+            }
+          }
+        }
+        .texto {
           //position: relative;
+          //width: 90vw;
+          overflow-y: hidden;
+          text-align: center;
 
-          //display: flex;
-          //font-size: 20px;
+          h2 {
+            //position: relative;
 
-          @include mobile {
-            //flex-direction: column;
-            //font-size: 13px;
+            //display: flex;
+            //font-size: 20px;
+
+            @include mobile {
+              //flex-direction: column;
+              //font-size: 13px;
+            }
           }
-        }
-        p {
-          background-color: aquamarine;
+          p {
+            //background-color: aquamarine;
 
-          font-size: 13px;
+            font-size: 13px;
 
-          @include mobile {
-            position: relative;
-            flex-direction: column;
-            //display: none;
+            @include mobile {
+              position: relative;
+              flex-direction: column;
+              //display: none;
+            }
           }
-        }
-        .btn {
-          background-color: cadetblue;
-          width: 100%;
-          margin-top: 8px;
-          display: block;
-          border: none; 
-          color: white; 
-          padding: 14px 28px; 
-          cursor: pointer; 
-          border-radius: 5px; 
-        }
-        span {
-          //font-size: 12px;
-          //font-weight: 600;
-          //text-decoration: underline;
-          //cursor: pointer;
+          a {
+            background-color:$SecondColor;
+            //width: 40px;
+            margin-top: 8px;
+
+            display: block;
+            border: none;
+            color: white;
+            padding: 9px;
+            cursor: pointer;
+            border-radius: 5px;
+          }
         }
       }
     }

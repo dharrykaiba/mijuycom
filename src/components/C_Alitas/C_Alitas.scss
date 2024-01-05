@@ -26,16 +26,15 @@
 
     @include mobile {
       //width: ;
-      height: 30%;
+      height: 22%;
       //margin: 0px 0;
     }
 
     .item {
-      
       width: 80%;
       height: 60%;
       background-color: white;
-      
+
       //border-radius: 20px;
       //display: flex;
       //align-items: center;
@@ -43,27 +42,26 @@
 
       @include mobile {
         display: flex;
-        //width: 95%;
-        height: 80%;
+        width: 95%;
+        height: 90%;
         //margin: 0px 0;
       }
       .imgContainer {
-        
         display: flex;
         align-items: center;
         justify-content: center;
         overflow-y: hidden;
-        
+
         //width: 50vw;
         @include mobile {
           position: relative;
-          width: 400px;
+          width: 150px;
           //width: 30%;
           //font-size: 13px;
         }
         img {
           background-color: chartreuse;
-          
+
           //position: relative;
           //align-items: center;
 
@@ -78,9 +76,10 @@
         }
       }
       .texto {
-        //position: relative;
         //width: 90vw;
         overflow-y: hidden;
+        text-align: center;
+        align-items: center;
 
         h2 {
           //position: relative;
@@ -104,23 +103,36 @@
             //display: none;
           }
         }
-        .btn {
-          background-color: cadetblue;
-          width: 100%;
-          margin-top: 8px;
+
+        a {
+          background-color: $SecondColor;
+
+          margin-top: 5pt;
+          padding: 5pt;
+
           display: block;
-          border: none; 
-          color: white; 
-          padding: 14px 28px; 
-          cursor: pointer; 
-          border-radius: 5px; 
+          width: 120px;
+          border: none;
+          color: white;
+
+          cursor: pointer;
+          border-radius: 5px;
+
+          .btnconteiner {
+            
+            display:flex;
+            align-items: center;
+            .icon {
+              font-size: 25px;
+              margin-left: 0px;
+            }
+            span {
+              font-size: 15px;
+              font-weight: 500;
+            }
+          }
         }
-        span {
-          //font-size: 12px;
-          //font-weight: 600;
-          //text-decoration: underline;
-          //cursor: pointer;
-        }
+       
       }
     }
   }
