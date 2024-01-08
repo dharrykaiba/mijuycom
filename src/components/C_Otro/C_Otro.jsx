@@ -1,39 +1,21 @@
 import { useState } from "react";
-import "./C_Alitas.scss";
+import "./C_Otro.scss";
 
-export default function C_Alitas() {
+export default function C_Extra() {
   const data = [
     {
       id: "1",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Alitas BBQ",
-      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas BBQ%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
-      desc: "5 alitas BBQ con papas y salchicha. ¡Un combo irresistiblemente delicioso! 🍗",
-      img: "./assets/platos/alitas_bbq1.png",
-      precio: "11.20",
-    },
-    {
-      id: "2",
-      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Alitas Broaster",
-      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas Broaster%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
-      desc: "5 alitas Broaster con papas y salchicha. ¡Crujientes y deliciosas! 🍟",
-      img: "./assets/platos/alitas_broaster1.png",
-      precio: "11.20",
-    },
-    {
-      id: "3",
-      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Chimichurri",
-      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas Chimichurri%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
-      desc: "Disfruta de 5 alitas con el toque fresco del Chimichurri. 🍗🌿 Acompañadas de papas y salchicha, este combo es una delicia única.",
-      img: "./assets/platos/alitas_chimichurri1.png",
-      precio: "11.20",
+      title: "Salchipapa Combinada",
+      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2ASalchipapa Combinada%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+      desc: "Experimenta la Sachipapa de Mijuy: papas crocantes, salchicha clásica y ahumada en una deliciosa combinación. 🥔🌭",
+      img: "./assets/platos/salchipapa_combinada.png",
+      precio: "6.4",
     },
   ];
 
   return (
-    <div className="c_alitas" id="c_alitas">
+    <div className="c_otro" id="c_otro">
       <div className="upcontainer">
         {data.map((d) => (
           <div className="container">
@@ -44,6 +26,7 @@ export default function C_Alitas() {
               <div className="texto">
                 <h2>{d.title}</h2>
                 <p>{d.desc}</p>
+                
                 <a class="btn" target="_blank" href={d.link}>
                   <div className="btnContainer">
                     <svg
@@ -61,7 +44,7 @@ export default function C_Alitas() {
                     <span>Pedir Promo - S/.{d.precio} </span>
                   </div>
                 </a>
-
+                
               </div>
             </div>
           </div>

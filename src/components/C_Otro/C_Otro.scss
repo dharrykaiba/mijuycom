@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
-.c_alitas {
-  background-color: $SecondColorB;
+.c_otro {
+  background-color: $Tonomorado;
   display: flex;
   //align-items: center;
   //justify-content: center;
@@ -48,7 +48,7 @@
       }
       .item {
         overflow-y: hidden;
-        width: 55%;
+        width: 30%;
         height: 430px;
         //background-color:$mainColor;
         //border-radius: 20px;
@@ -61,7 +61,6 @@
           height: 100%;
           width: 80%;
           //height: 50px;
-          
         }
         .imgContainer {
           //background-color: $mainColor;
@@ -85,7 +84,7 @@
             @include mobile {
               //position: relative;
               //height: 50px;
-              width: 100%;
+              width: 90%;
               //width: 30%;
               //font-size: 13px;
             }
@@ -96,7 +95,7 @@
           //width: 90vw;
           overflow-y: hidden;
           text-align: center;
-          color: $TonoBlanco;
+          color: $mainColor;
           h2 {
             //position: relative;
 
@@ -104,7 +103,6 @@
             //font-size: 20px;
 
             @include mobile {
-              
               //flex-direction: column;
               //font-size: 13px;
             }
@@ -113,7 +111,6 @@
             //background-color: aquamarine;
             font-size: 13px;
             @include mobile {
-              width: 70vw;
               position: relative;
               flex-direction: column;
               //display: none;
@@ -126,11 +123,11 @@
             margin-top: 8px;
             display: block;
             border: none;
-            color:$TonoBlanco;
+            color: $TonoBlanco;
             padding: 9px;
             cursor: pointer;
             border-radius: 5px;
-            
+
             //width: 130px;
 
             .btnContainer {
