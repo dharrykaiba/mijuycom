@@ -15,7 +15,7 @@ export default function Rutas() {
 
       <Route
         index
-        path="/pedido"
+        path="/*"
         element={
           <div className="sections">
             {/*<Construction />*/}
