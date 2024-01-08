@@ -48,8 +48,9 @@
       }
 
       .item {
+        overflow-y: hidden;
         width: 80%;
-        height: 80%;
+        height: 430px;
        //background-color:$mainColor;
 
         //border-radius: 20px;
@@ -74,7 +75,7 @@
           //width: 50vw;
           @include mobile {
             //position: relative;
-            width: 400px;
+            width: 250px;
 
             //width: 30%;
             //font-size: 13px;
