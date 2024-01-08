@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import Construction from "./components/Construction/Construction";
+//import Construction from "./components/Construction/Construction";
 import Intro from "./components/Intro/Intro";
 import Carta from "./components/Carta/Carta";
 import C_Alitas from "./components/C_Alitas/C_Alitas";
@@ -17,13 +17,22 @@ export default function Rutas() {
         path="/"
         element={
           <div className="sections">
-            <Construction />
-            {/*<Intro />
+            {/*<Construction />*/}
+            <Intro />
             <Carta />
             <C_Alitas />
             <C_Burguer />
             <C_Extra />
-            <C_Pizzas />*/}
+            <C_Pizzas />
+          </div>
+        }
+      />
+      <Route
+        index
+        path="/pedido"
+        element={
+          <div className="sections">
+            <Navigate to="/" />
           </div>
         }
       />
@@ -37,5 +46,6 @@ export default function Rutas() {
         }
       />
     </Routes>
+    
   );
 }
