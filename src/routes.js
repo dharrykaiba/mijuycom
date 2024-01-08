@@ -12,7 +12,7 @@ import C_Pizzas from "./components/C_Pizzas/C_Pizzas";
 export default function Rutas() {
   return (
     <Routes>
-      <Route path="/404" element={<Navigate to="/" />} />
+      <Route path="/pedido" element={<Navigate to="/" />} />
 
       <Route
         index
