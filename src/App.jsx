@@ -11,7 +11,7 @@ import { useState } from "react";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <div className="App">
         <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
