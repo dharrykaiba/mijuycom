@@ -12,10 +12,11 @@ import C_Pizzas from "./components/C_Pizzas/C_Pizzas";
 export default function Rutas() {
   return (
     <Routes>
+      <Route path="/404" element={<Navigate to="/" />} />
 
       <Route
         index
-        path="/*"
+        path="/"
         element={
           <div className="sections">
             {/*<Construction />*/}
