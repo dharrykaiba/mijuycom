@@ -24,7 +24,7 @@ export default function Intro() {
           <h2>¡ Bienvenido a Mijuy !</h2>
           <h1>¡Despliega hacia abajo y sumérgete en una experiencia única! Disfruta de sabores auténticos en cada bocado. 🍕🍔🎉</h1>
           <h3>
-            Por apertura 20% Descuento y Delivery Gratis para la Alameda Salaverry y Santa Rita: <span ref={textRef}></span>
+            Aprovecha nuestros descuentos del 20% en varios productos, Delivery Gratis para la Alameda Salaverry y Santa Rita: <span ref={textRef}></span>
           </h3>
         </div>
         <a href="#carta">
