@@ -12,7 +12,7 @@ $YellowColor:#e06c00b9;
 $GreenColor:#beff26d3;
 $RedColor: #e64c57;
 
-$width: 768px;
+$width: 799px;
 
 @mixin mobile {
   @media (max-width: #{$width}) {

@@ -27,6 +27,7 @@
       //margin: 0px 0;
     }
     .container {
+      overflow-y: hidden;
       height: 80%;
 
       //background-color: $mainColor;
@@ -37,7 +38,7 @@
       justify-content: center;
       @include mobile {
         height: 120px;
-        margin: 50px 0px 0px 0;
+        margin: 20px 0px 0px 0;
 
         display: flex;
 
@@ -48,8 +49,9 @@
       }
       .item {
         overflow-y: hidden;
-        width: 55%;
-        height: 430px;
+        width: 50%;
+        height: 38vw;
+        
         //background-color:$mainColor;
         //border-radius: 20px;
         //display: flex;
@@ -59,7 +61,7 @@
         @include mobile {
           display: flex;
           height: 100%;
-          width: 80%;
+          width: 90%;
           //height: 50px;
           
         }
@@ -72,7 +74,7 @@
           //width: 50vw;
           @include mobile {
             //position: relative;
-            width: 150px;
+            width: 120px;
             //width: 30%;
             //font-size: 13px;
           }
@@ -113,7 +115,7 @@
             //background-color: aquamarine;
             font-size: 13px;
             @include mobile {
-              width: 70vw;
+              width: 62vw;
               position: relative;
               flex-direction: column;
               //display: none;

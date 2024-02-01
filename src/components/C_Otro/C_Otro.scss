@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     @include mobile {
-      height: 90%;
+      height: 90vw;
       display: block;
 
       //width: ;
@@ -27,6 +27,7 @@
       //margin: 0px 0;
     }
     .container {
+      overflow-y: hidden;
       height: 80%;
 
       //background-color: $mainColor;
@@ -49,7 +50,7 @@
       .item {
         overflow-y: hidden;
         width: 30%;
-        height: 430px;
+        height: 30vw;
         //background-color:$mainColor;
         //border-radius: 20px;
         //display: flex;
@@ -68,7 +69,7 @@
           align-items: center;
           justify-content: center;
           overflow-y: hidden;
-          //width: 50vw;
+          height: 12vw;
           @include mobile {
             //position: relative;
             width: 150px;

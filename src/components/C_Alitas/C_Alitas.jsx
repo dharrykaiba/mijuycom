@@ -26,8 +26,17 @@ export default function C_Alitas() {
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
       title: "Chimichurri",
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas Chimichurri%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
-      desc: "Disfruta de 5 alitas con el toque fresco del Chimichurri. 🍗🌿 Acompañadas de papas y salchicha, este combo es una delicia única.",
+      desc: "Disfruta de 5 alitas con el toque fresco del Chimichurri. 🍗🌿 Acompañadas de papas y salchicha, es una delicia única.",
       img: "./assets/platos/alitas_chimichurri1.png",
+      precio: "11.20",
+    },
+    {
+      id: "4",
+      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
+      title: "Acevichadas",
+      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas Acevichadas%2A 🌶️ para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+      desc: "🌶️🍗 Un festín fresco y picante que deleitará tu paladar. 5 Alitas acevichadas acompañadas de papas y salchicha 🚀",
+      img: "./assets/platos/alitas_acevichadas.png",
       precio: "11.20",
     },
   ];

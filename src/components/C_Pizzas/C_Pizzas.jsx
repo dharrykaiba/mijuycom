@@ -35,7 +35,7 @@ export default function C_Pizzas() {
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
       title: "De la Casa",
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola!, dame una %2APizza de la Casa%2A%0ATamaño: Personal / Mediana / Familiar %0APago con Yape o Efectivo.",
-      desc: "Sumérgete en el auténtico sabor casero con nuestra Pizza de la Casa. 🏡🍕 Llena de salchicha, chorizo, aceitunas y champiñones.",
+      desc: "Sumérgete en el auténtico sabor casero con nuestra Pizza de la Casa. 🏡🍕 Llena de salchicha, jamón, aceitunas y champiñones.",
       img: "./assets/platos/pizza_delacasa.png",
       precio: "PER-17.6 MED-25.6 FAM-38.4",
     },

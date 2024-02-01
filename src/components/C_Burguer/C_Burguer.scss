@@ -27,6 +27,7 @@
       //margin: 0px 0;
     }
     .container {
+      overflow-y: hidden;
       height: 80%;
 
       //background-color: $mainColor;
@@ -48,8 +49,8 @@
       }
       .item {
         overflow-y: hidden;
-        width: 40%;
-        height: 430px;
+        width: 45%;
+        height: 45vw;
         //background-color:$mainColor;
         //border-radius: 20px;
         //display: flex;
