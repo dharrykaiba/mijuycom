@@ -33,7 +33,7 @@ export default function Carta() {
       title: "Otros",
       link: "#c_otro",
       desc: "Crocantes papitas, las mejores salchichas, espectaculares salchipapas.",
-      img: "./assets/platos/salchipapa_combinada.png",
+      img: "./assets/platos/otros_todas.png",
     },
   ];
 
