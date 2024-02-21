@@ -18,7 +18,7 @@ export default function C_Burguer() {
       title: "Doble de Carne",
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa con Doble de Carne%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
       desc: "¡Doble placer, doble sabor! Lleva una Hamburguesa de Carne Doble con doble porción de la clásica jugosidad. 🍔",
-      img: "./assets/platos/hamburguesa_doble.png",
+      img: "./assets/platos/hamburguesa_doble_low.png",
       precio: "14.40",
     },
     
