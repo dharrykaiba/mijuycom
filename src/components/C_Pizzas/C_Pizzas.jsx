@@ -10,7 +10,7 @@ export default function C_Pizzas() {
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola!, dame una %2APizza Americana%2A%0ATamaño: Personal / Mediana / Familiar %0APago con Yape o Efectivo.",
       desc: "Pizza Americana en versión Personal, Mediana o Familiar. Tú eliges, nosotros entregamos el sabor. 🍕",
       img: "./assets/platos/pizza_americana.png",
-      precio: "PER-14.4 MED-20.8 FAM-28.8",
+      precio: "PER-18 MED-26 FAM-36",
     },
     {
       id: "2",
@@ -19,7 +19,7 @@ export default function C_Pizzas() {
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola!, dame una %2APizza de Hawaiana%2A%0ATamaño: Personal / Mediana / Familiar %0APago con Yape o Efectivo.",
       desc: "Descubre la exquisita fusión de sabores en nuestra Pizza Hawaiana con piña y durazno. 🍍🍑",
       img: "./assets/platos/pizza_hawaiana.png",
-      precio: "PER-16.0 MED-23.2 FAM-33.6",
+      precio: "PER-19 MED-28 FAM-40",
     },
     {
       id: "3",
@@ -28,7 +28,7 @@ export default function C_Pizzas() {
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola!, dame una %2APizza de Pepperoni%2A%0ATamaño: Personal / Mediana / Familiar %0APago con Yape o Efectivo.",
       desc: "Disfruta del clásico sabor con nuestra Pizza de Pepperoni. 🍕 ¡Irresistible mezcla de queso y pepperoni!",
       img: "./assets/platos/pizza_pepperoni.png",
-      precio: "PER-15.2 MED-22.4 FAM-32.0",
+      precio: "PER-19 MED-28 FAM-40",
     },
     {
       id: "4",
@@ -37,7 +37,7 @@ export default function C_Pizzas() {
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola!, dame una %2APizza de la Casa%2A%0ATamaño: Personal / Mediana / Familiar %0APago con Yape o Efectivo.",
       desc: "Sumérgete en el auténtico sabor casero con nuestra Pizza de la Casa. 🏡🍕 Llena de salchicha, jamón, aceitunas y champiñones.",
       img: "./assets/platos/pizza_delacasa.png",
-      precio: "PER-17.6 MED-25.6 FAM-38.4",
+      precio: "PER-22 MED-32 FAM-48",
     },
   ];
 

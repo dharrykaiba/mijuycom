@@ -11,7 +11,7 @@ export default function C_Extra() {
       desc: "Experimenta la Sachipapa de Mijuy: papas crocantes, salchicha clásica y ahumada en una deliciosa combinación. 🥔🌭",
       img: "./assets/platos/salchipapa_combinada.png",
       precio: "8",
-    },{
+    },/*{
       id: "2",
       icon: "./assets/otros_todas.jpg",
       title: "Pizza Corazón",
@@ -19,7 +19,7 @@ export default function C_Extra() {
       desc: "¡Sorprende con amor! 🍕❤️ Disfruta nuestra pizza corazón en sabores Americana o Hawaiana o Pepperoni.",
       img: "./assets/platos/pizza_corazonb.png",
       precio: "28",
-    },
+    },*/
   ];
 
   return (
