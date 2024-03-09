@@ -10,7 +10,7 @@ export default function C_Burguer() {
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa Clasica%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
       desc: "Deléitate con nuestra Hamburguesa Clásica de carne jugosa. 🍔 Una experiencia auténtica, con ingredientes frescos y sabor inigualable.",
       img: "./assets/platos/hamburguesa_clasica.png",
-      precio: "8.80",
+      precio: "9.00",
     },
     {
       id: "2",
@@ -19,7 +19,7 @@ export default function C_Burguer() {
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa con Doble de Carne%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
       desc: "¡Doble placer, doble sabor! Lleva una Hamburguesa de Carne Doble con doble porción de la clásica jugosidad. 🍔",
       img: "./assets/platos/hamburguesa_doble_low.png",
-      precio: "14.40",
+      precio: "13.90",
     },
     
   ];
