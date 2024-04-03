@@ -8,7 +8,7 @@ export default function C_Burguer() {
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
       title: "Clasica de Carne",
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa Clasica%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
-      desc: "Deléitate con nuestra Hamburguesa Clásica de carne jugosa. 🍔 Una experiencia auténtica, con ingredientes frescos y sabor inigualable.",
+      desc: "Deléitate con nuestra Hamburguesa Clásica de carne jugosa. 🍔 Una experiencia auténtica y sabor inigualable.",
       img: "./assets/platos/hamburguesa_clasica.png",
       precio: "9.00",
     },
@@ -20,6 +20,24 @@ export default function C_Burguer() {
       desc: "¡Doble placer, doble sabor! Lleva una Hamburguesa de Carne Doble con doble porción de la clásica jugosidad. 🍔",
       img: "./assets/platos/hamburguesa_doble_low.png",
       precio: "13.90",
+    },
+    {
+      id: "3",
+      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
+      title: "Hamburguesa de Pollo",
+      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa de Pollo%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+      desc: "🍔🍟 Hamburguesa de Pollo: ¡Sabor y jugosidad en cada bocado! 😋🐔 Acompañada de deliciosas papas fritas.",
+      img: "./assets/platos/hamburguesa_pollo.png",
+      precio: "9.00",
+    },
+    {
+      id: "4",
+      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
+      title: "Hamburguesa de Pollo Crispy",
+      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa de Pollo Crispy%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+      desc: "🍗🔥 Hamburguesa de Pollo Crispy: ¡Una explosión de sabor y crujiente textura te espera! 🍔😋 Acompañada de papas doradas",
+      img: "./assets/platos/hamburguesa_pollo_crispy.png",
+      precio: "10.00",
     },
     
   ];
