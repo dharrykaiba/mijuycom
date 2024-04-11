@@ -39,15 +39,7 @@ export default function C_Alitas() {
       img: "./assets/platos/alitas_acevichadas.png",
       precio: "14.00",
     },
-    {
-      id: "5",
-      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "COMBO MEGA",
-      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A.%0ACon cremas: %0APago con Yape o Efectivo.%0A 2 Sabores: ",
-      desc: "🍗🔥 ¡Disfruta de 10 alitas con 2 sabores a elección, acompañadas de papas y salchicha! 🍟🌭",
-      img: "./assets/platos/alitas_todas.png",
-      precio: "25.00",
-    },
+    
   ];
 
   return (
