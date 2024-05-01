@@ -1,22 +1,21 @@
 import { useState } from "react";
-import "./C_Pizzas.scss";
+import "./C_Promos.scss";
 
-export default function C_Pizzas() {
+export default function C_Promos() {
   const data = [
     {
       id: "1",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "COMBO MEGA Alitas",
+      title: "PROMO MEGA",
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A.%0ACon cremas: %0APago con Yape o Efectivo.%0A 2 Sabores: ",
-      desc: "🍗🔥 ¡Disfruta de 10 alitas con 2 sabores a elección, acompañadas de papas y salchicha! 🍟🌭",
-      img: "./assets/platos/COMBO_MEGA_ALITAS.png",
-      precio: "25.00",
+      desc: "🍗🔥 ¡10 alitas con 2 sabores, PROMO DIA DEL TRABAJO!",
+      img: "./assets/platos/PROMO_COMBO_MEGA_ALITAS.png",
+      precio: "20.00",
     },
-    
   ];
 
   return (
-    <div className="c_pizzas" id="c_pizzas">
+    <div className="c_promos" id="c_promos">
       <div className="upcontainer">
         {data.map((d) => (
           <div className="container">

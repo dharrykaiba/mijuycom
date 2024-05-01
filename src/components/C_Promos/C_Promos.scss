@@ -1,0 +1,159 @@
+@import "../../global.scss";
+
+.c_promos {
+  background-color: $GreenColor;
+  display: flex;
+  //align-items: center;
+  //justify-content: center;
+  //position: relative;
+  //border: 5px;
+
+  @include mobile {
+    flex-direction: column;
+    height: 10vh;
+    justify-content: center;
+  }
+  .upcontainer {
+    //background-color: chocolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+      height: 90%;
+      display: block;
+
+      //width: ;
+
+      //margin: 0px 0;
+    }
+    .container {
+      overflow-y: hidden;
+      height: 80%;
+
+      //background-color: $mainColor;
+
+      //width: 30vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include mobile {
+        height: 120px;
+        margin: 10px 0px 0px 0;
+
+        display: flex;
+
+        //align-items:center;
+        //width: ;
+
+        //margin: 0px 0;
+      }
+      .item {
+        overflow-y: hidden;
+        width: 30%;
+        height: 40vw;
+        //background-color:$mainColor;
+        //border-radius: 20px;
+        //display: flex;
+        //align-items: center;
+        //justify-content: center;
+
+        @include mobile {
+          display: flex;
+          height: 100%;
+          width: 95%;
+          //height: 50px;
+          //margin: 0px 0;
+        }
+        .imgContainer {
+          //background-color: $mainColor;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow-y: hidden;
+          //width: 50vw;
+          @include mobile {
+            //position: relative;
+            width: 150px;
+            //width: 30%;
+            //font-size: 13px;
+          }
+          img {
+            //background-color: $mainColor;
+            //position: relative;
+            //align-items: center;
+            width: 70vw;
+            transform: rotate(-0deg);
+            @include mobile {
+              //position: relative;
+              //height: 50px;
+              width: 120%;
+
+              //width: 30%;
+              //font-size: 13px;
+            }
+          }
+        }
+        .texto {
+          //position: relative;
+          //width: 90vw;
+          overflow-y: hidden;
+          text-align: center;
+          color: $TercerColor;
+          h2 {
+            //position: relative;
+
+            //display: flex;
+            //font-size: 20px;
+
+            @include mobile {
+              //flex-direction: column;
+              //font-size: 13px;
+            }
+          }
+          p {
+            //background-color: aquamarine;
+            font-size: 13px;
+            @include mobile {
+              position: relative;
+              flex-direction: column;
+              //display: none;
+            }
+          }
+
+          a {
+            background-color: $SecondColor;
+            //width: 30px;
+            margin-top: 8px;
+            display: block;
+            border: none;
+            color: $TonoBlanco;
+            padding: 9px;
+            cursor: pointer;
+            border-radius: 5px;
+            
+            //width: 130px;
+
+            .btnContainer {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              //margin-left: 10px;
+
+              @include mobile {
+                //display: none;
+              }
+              .icon {
+                font-size: 25px;
+                margin-right: 5px;
+              }
+              span {
+                font-size: 15px;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
