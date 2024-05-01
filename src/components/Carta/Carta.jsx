@@ -3,14 +3,14 @@ import "./Carta.scss";
 
 export default function Carta() {
   const data = [
-    {
+    /*{
       id: "1",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
       title: "Pizzas",
       link: "#c_pizzas",
       desc: "Escoge la que quieras: Americana, Hawaiana, Pepperoni.",
       img: "./assets/platos/pizzas_todas.png",
-    },
+    },*/
     {
       id: "2",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",

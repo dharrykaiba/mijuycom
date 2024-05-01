@@ -8,7 +8,7 @@ import C_Alitas from "./components/C_Alitas/C_Alitas";
 import C_Combos from "./components/C_Combos/C_Combos";
 import C_Burguer from "./components/C_Burguer/C_Burguer";
 import C_Otro from "./components/C_Otro/C_Otro";
-import C_Pizzas from "./components/C_Pizzas/C_Pizzas";
+//import C_Pizzas from "./components/C_Pizzas/C_Pizzas";
 
 export default function Rutas() {
   return (
@@ -22,7 +22,7 @@ export default function Rutas() {
             <Intro />
             <C_Combos />
             <Carta />
-            <C_Pizzas />
+            
             <C_Alitas />
             <C_Burguer />
             <C_Otro />
