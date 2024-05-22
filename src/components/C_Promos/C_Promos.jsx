@@ -7,10 +7,10 @@ export default function C_Promos() {
       id: "1",
       icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
       title: "PROMO MEGA",
-      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A.%0ACon cremas: %0APago con Yape o Efectivo.%0A 2 Sabores: ",
-      desc: "🍗🔥 ¡10 alitas con 2 sabores, PROMO DIA DEL TRABAJO!",
-      img: "./assets/platos/PROMO_COMBO_MEGA_ALITAS.png",
-      precio: "20.00",
+      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la Promo %2AMiercoles de Combo MEGA Alitas%2A.%0ACon cremas: %0APago con Yape o Efectivo.%0A 2 Sabores: ",
+      desc: "🍗🔥 ¡10 alitas con 2 sabores, PROMO MIERCOLES!",
+      img: "./assets/platos/COMBO_MEGA_ALITAS_miercoles.png",
+      precio: "Pedir S/20.00",
     },
   ];
 

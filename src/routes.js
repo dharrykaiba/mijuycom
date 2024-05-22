@@ -21,7 +21,7 @@ export default function Rutas() {
           <div className="sections">
             {/*<Construction />*/}
             <Intro />
-            {/*<C_Promos />*/}
+            <C_Promos />
             <C_Combos />
             <Carta />
             <C_Alitas />
