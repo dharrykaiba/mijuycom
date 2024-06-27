@@ -12,15 +12,7 @@ export default function C_Combos() {
       img: "./assets/platos/COMBO_MEGA_ALITAS.png",
       precio: "25.00",
     },
-    {
-      id: "2",
-      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "COMBO ULTRA",
-      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas BBQ%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
-      desc: "¡Disfruta de 10 alitas con 2 sabores a elección +Papas +Salchicha +Postre del dia +Pepsi 500ml!",
-      img: "./assets/platos/COMBO_ULTRA.png",
-      precio: "28.50",
-    },
+    
     
   ];
 
