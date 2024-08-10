@@ -30,6 +30,7 @@ export default function Rutas() {
           </div>
         }
       />
+      <Route path="/whatsapp" element={<Navigate to="https://api.whatsapp.com/send?phone=51950276474&text=Hola!%20quiero%20hacer%20un%20pedido" />} />
       <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   );
