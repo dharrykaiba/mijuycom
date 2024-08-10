@@ -21,7 +21,7 @@ export default function Intro() {
       </div>
       <div className="right">
         <div className="weapper">
-          <h2>¡ Bienvenidos a Mijuy !</h2>
+          <h2>¡ Bienvenido a Mijuy !</h2>
           <h1>¡Despliega hacia abajo y sumérgete en una experiencia única! Disfruta de sabores auténticos en cada bocado. 🍕🍔🎉</h1>
           <h3>
             Aprovecha nuestros descuentos del 20% en varios platos, delivery Gratis para la Alameda Salaverry y Santa Rita: <span ref={textRef}></span>
