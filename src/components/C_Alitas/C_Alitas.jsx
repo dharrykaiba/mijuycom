@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import "./C_Alitas.scss";
 
 export default function C_Alitas() {
@@ -54,7 +54,7 @@ export default function C_Alitas() {
               <div className="texto">
                 <h2>{d.title}</h2>
                 <p>{d.desc}</p>
-                <a class="btn" target="_blank" href={d.link}>
+                <a class="btn" target="_blank" rel="noreferrer" href={d.link}>
                   <div className="btnContainer">
                     <svg
                       className="icon"

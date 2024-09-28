@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import "./Carta.scss";
 
 export default function Carta() {

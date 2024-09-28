@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import "./C_Pizzas.scss";
 
 export default function C_Pizzas() {
@@ -29,7 +29,7 @@ export default function C_Pizzas() {
                 <p>{d.desc}</p>
                 
                 
-                <a class="btn" target="_blank" href={d.link}>
+                <a class="btn" target="_blank" rel="noreferrer" href={d.link}>
                   <div className="btnContainer">
                     <svg
                       className="icon"

@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import "./C_Otro.scss";
 
 export default function C_Extra() {
@@ -35,7 +35,7 @@ export default function C_Extra() {
                 <h2>{d.title}</h2>
                 <p>{d.desc}</p>
                 
-                <a class="btn" target="_blank" href={d.link+" S/"+ d.precio}>
+                <a class="btn" target="_blank" rel="noreferrer" href={d.link+" S/"+ d.precio}>
                   <div className="btnContainer">
                     <svg
                       className="icon"

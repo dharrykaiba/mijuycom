@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import "./C_Combos.scss";
 
 export default function C_Combos() {
@@ -37,7 +37,7 @@ export default function C_Combos() {
               <div className="texto">
                 <h2>{d.title}</h2>
                 <p>{d.desc}</p>
-                <a class="btn" target="_blank" href={d.link}>
+                <a class="btn" target="_blank" rel="noreferrer" href={d.link}>
                   <div className="btnContainer">
                     <svg
                       className="icon"

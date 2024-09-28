@@ -46,7 +46,7 @@ export default function C_Burguer() {
                 <h2>{d.title}</h2>
                 <p>{d.desc}</p>
                 
-                <a class="btn" target="_blank" href={d.link}>
+                <a class="btn" target="_blank" rel="noreferrer" href={d.link}>
                   <div className="btnContainer">
                     <svg
                       className="icon"
