@@ -3,23 +3,23 @@
   background-color:rgb(197, 127, 255);
   .sections {
     width: 100%;
-    height: calc(100vh - 45px);
+    height: calc(100vh - 45px); // Ajusta la altura para compensar el `top: 45px`.
+    overflow: hidden; // Asegura que no genere scrollbars.
     background-color: #2f49be;
     position: relative;
     top: 45px;
-
+  
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    scrollbar-width: none;
+    scrollbar-width: none; // Oculta el scrollbar en Firefox.
     &::-webkit-scrollbar {
-      display: none;
+      display: none; // Oculta el scrollbar en navegadores basados en WebKit.
     }
+  
     > * {
-      width: 100vw;
-      height: calc(100vh - 45px);
+      width: 100%;
+      height: calc(100vh - 45px); // Consistencia en las dimensiones.
       scroll-snap-align: start;
-      
     }
-    
   }
 }

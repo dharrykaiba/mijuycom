@@ -3,8 +3,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden; // Oculta cualquier scrollbar.
-  height: 100%; // Asegura que el body y html ocupen toda la ventana.
+  overflow: hidden; // Oculta scrollbars completamente.
+  height: 100%; // Asegura que el contenedor ocupe toda la ventana.
 }
 
 .intro2 {
@@ -12,11 +12,11 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; // Ocupa toda la altura de la ventana sin scroll.
+  height: 100vh; // Garantiza que ocupe toda la altura visible.
 
   .centeredImage {
-    width: 600px;
-    height: 600px;
+    width: 590px;
+    height: 590px;
     background-color: $TercerColor;
     border-radius: 50%; // Imagen en un contenedor circular.
     display: flex;
