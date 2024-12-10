@@ -21,15 +21,7 @@ export default function C_Burguer() {
       img: "./assets/platos/hamburguesa_doble_low.png",
       precio: "13.90",
     },
-    {
-      id: "3",
-      icon: "./assets/logo_rojo_naranja_blanco-09.jpg",
-      title: "Hamburguesa de Pollo Crispy",
-      link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa de Pollo Crispy%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
-      desc: "🍗🔥 Hamburguesa de Pollo Crispy: ¡Una explosión de sabor y crujiente textura te espera! 🍔😋 Acompañada de papas doradas",
-      img: "./assets/platos/hamburguesa_pollo_crispy.png",
-      precio: "11.00",
-    },
+    
     
   ];
 
