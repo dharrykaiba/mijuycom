@@ -3,8 +3,9 @@
   background-color:rgb(197, 127, 255);
   .sections {
     width: 100%;
-    height: calc(100vh - 45px); // Ajusta la altura para compensar el `top: 45px`.
-    overflow: hidden; // Asegura que no genere scrollbars.
+    height: calc(100vh - 45px);
+    overflow-y: auto; // Permite desplazamiento vertical.
+    overflow-x: hidden; // Asegura que no haya desplazamiento horizontal.
     background-color: #2f49be;
     position: relative;
     top: 45px;
