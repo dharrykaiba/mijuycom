@@ -1,0 +1,33 @@
+.footer {
+  width: 100%;
+  background-color: #2f49be;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer-section {
+  margin: 10px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  p, a {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+}

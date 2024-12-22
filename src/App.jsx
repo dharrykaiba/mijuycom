@@ -1,22 +1,32 @@
-import Topbar from "./components/Topbar/Topbar";
-import Intro from "./components/Intro/Intro";
-import Menu from "./components/Menu/Menu";
-
+import React, { useEffect } from "react";
 import "./App.scss";
-import React from "react";
-import Rutas from "./routes";
-import { BrowserRouter } from "react-router-dom";
-import { useState } from "react";
+import Intro from "./components/Intro/Intro";
+import Carta from "./components/Carta/Carta";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  useEffect(() => {
+    // Función para forzar que la primera sección ocupe toda la pantalla
+    const handleScroll = () => {
+      const firstSection = document.querySelector('.sections > *:first-child');
+      // Verificamos si el scroll ha llegado a la primera sección
+      if (window.scrollY >= firstSection.offsetTop) {
+        // Si es así, forzamos que la primera sección tenga una altura del 100vh
+        firstSection.style.height = '100vh';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll); // Agregamos el event listener
+    return () => window.removeEventListener('scroll', handleScroll); // Limpiamos el event listener
+  }, []);
+
   return (
-    <BrowserRouter basename="/">
-      <div className="App">
-        <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <Rutas></Rutas>
+    <div className="App">
+      <div className="sections">
+        <Intro />
+        <Carta />
+        <Footer /> {/* El footer ahora es parte del flujo normal */}
       </div>
-    </BrowserRouter>
+    </div>
   );
 }

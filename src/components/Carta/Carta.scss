@@ -1,143 +1,57 @@
 @import "../../global.scss";
 
 .carta {
-  background-color: $FourColor;
   display: flex;
-  //align-items: center;
-  //justify-content: center;
-  //position: relative;
-  //border: 5px;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
 
-  @include mobile {
-    flex-direction: column;
-    height: 10vh;
-    justify-content: center;
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
   }
-  .upcontainer {
-    //background-color: chocolate;
+
+  .platosContainer {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    @include mobile {
-      height: 90%;
-      display: block;
+    gap: 20px;
 
-      //width: ;
+    .plato {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 300px;
+      text-align: center;
 
-      //margin: 0px 0;
-    }
-    .container {
-      overflow-y: hidden;
-      height: 80%;
-
-      //background-color: $mainColor;
-
-      //width: 30vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @include mobile {
-        height: 120px;
-        margin: 10px 0px 0px 0px;
-
-        display: flex;
-
-        //align-items:center;
-        //width: ;
-
-        //margin: 0px 0;
+      img {
+        max-width: 100%;
+        max-height: 200px; /* Limita la altura de las imágenes */
+        border-radius: 8px;
       }
 
-      .item {
-        overflow-y: hidden;
-        width: 80%;
-        height: 35vw;
-       //background-color:$mainColor;
+      h3 {
+        color: #444;
+      }
 
-        //border-radius: 20px;
-        //display: flex;
-        //align-items: center;
-        //justify-content: center;
+      .precio {
+        color: #dd052b;
+        font-weight: bold;
+      }
 
-        @include mobile {
-          display: flex;
-          height: 100%;
-          //width: 95%;
-          //height: 50px;
-          //margin: 0px 0;
-        }
-        .imgContainer {
-          //background-color: $mainColor;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          overflow-y: hidden;
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #2f49be;
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
 
-          //width: 50vw;
-          @include mobile {
-            //position: relative;
-            width: 250px;
-
-            //width: 30%;
-            //font-size: 13px;
-          }
-          img {
-            //background-color: $mainColor;
-
-            //position: relative;
-            //align-items: center;
-
-            width: 70vw;
-            transform: rotate(-10deg);
-            @include mobile {
-              //position: relative;
-              //height: 50px;
-              width: 100%;
-              //width: 30%;
-              //font-size: 13px;
-            }
-          }
-        }
-        .texto {
-          //position: relative;
-          //width: 90vw;
-          overflow-y: hidden;
-          text-align: center;
-
-          h2 {
-            //position: relative;
-
-            //display: flex;
-            //font-size: 20px;
-
-            @include mobile {
-              //flex-direction: column;
-              //font-size: 13px;
-            }
-          }
-          p {
-            //background-color: aquamarine;
-
-            font-size: 13px;
-
-            @include mobile {
-              position: relative;
-              flex-direction: column;
-              //display: none;
-            }
-          }
-          a {
-            background-color:$SecondColor;
-            //width: 40px;
-            margin-top: 8px;
-
-            display: block;
-            border: none;
-            color: white;
-            padding: 9px;
-            cursor: pointer;
-            border-radius: 5px;
-          }
+        &:hover {
+          background-color: #dd052b;
         }
       }
     }

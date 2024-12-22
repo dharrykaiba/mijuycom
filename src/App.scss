@@ -1,26 +1,18 @@
 .App {
-  height: 100vh;
-  background-color:rgb(197, 127, 255);
+  display: flex;
+  flex-direction: column;
+  background-color: #c57fff;
+
   .sections {
-    width: 100%;
-    height: calc(100vh - 45px);
-    overflow-y: auto; // Permite desplazamiento vertical.
-    overflow-x: hidden; // Asegura que no haya desplazamiento horizontal.
-    background-color: #2f49be;
-    position: relative;
-    top: 45px;
-  
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none; // Oculta el scrollbar en Firefox.
-    &::-webkit-scrollbar {
-      display: none; // Oculta el scrollbar en navegadores basados en WebKit.
-    }
-  
-    > * {
-      width: 100%;
-      height: calc(100vh - 45px); // Consistencia en las dimensiones.
-      scroll-snap-align: start;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 0;
+
+    & > *:first-child {
+      height: 100vh; // La primera sección ocupa toda la pantalla inicialmente
+      position: sticky; // Hacemos que la primera sección sea "pegajosa"
+      top: 0; // Se quedará pegada a la parte superior cuando el scroll llegue a ella
+      z-index: 10; // Aseguramos que esta sección esté por encima de las siguientes
     }
   }
 }

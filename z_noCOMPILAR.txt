@@ -1,0 +1,204 @@
+import React, { useEffect } from "react";
+import "./App.scss";
+import Intro from "./components/Intro/Intro";
+import Carta from "./components/Carta/Carta";
+import Footer from "./components/Footer/Footer";
+
+export default function App() {
+  useEffect(() => {
+    // Función para forzar que la primera sección ocupe toda la pantalla
+    const handleScroll = () => {
+      const firstSection = document.querySelector('.sections > *:first-child');
+      // Verificamos si el scroll ha llegado a la primera sección
+      if (window.scrollY >= firstSection.offsetTop) {
+        // Si es así, forzamos que la primera sección tenga una altura del 100vh
+        firstSection.style.height = '100vh';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll); // Agregamos el event listener
+    return () => window.removeEventListener('scroll', handleScroll); // Limpiamos el event listener
+  }, []);
+
+  return (
+    <div className="App">
+      <div className="sections">
+        <Intro />
+        <Carta />
+        <Footer /> {/* El footer ahora es parte del flujo normal */}
+      </div>
+    </div>
+  );
+}
+.App {
+  height: 100vh;
+  background-color: #c57fff;
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-y: auto; /* Permite desplazamiento vertical */
+  }
+
+  /* Hacemos sticky solo en la primera sección */
+  .sections > *:first-child {
+    position: sticky;
+    top: 0; /* Se queda en la parte superior al hacer scroll */
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    z-index: 10; /* Asegura que esté por encima de las siguientes secciones */
+  }
+
+  .sections > * {
+    flex: none;
+    height: 100vh; /* Cada sección ocupa toda la altura de la pantalla */
+  }
+}
+//src/components/Carta/App.jsx
+import React, { useState, useEffect } from "react";
+import "./Carta.scss";
+
+export default function Carta() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("/data/platos.json")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error("Error al cargar el JSON:", error));
+  }, []);
+
+  return (
+    <div className="carta" id="carta">
+      <h2>Selecciona tu Plato</h2>
+      <div className="platosContainer">
+        {data.map((plato) => (
+          <div key={plato.id} className="plato">
+            <img src={plato.img} alt={plato.title} />
+            <h3>{plato.title}</h3>
+            <p>{plato.desc}</p>
+            <p className="precio">Precio: S/ {plato.precio}</p>
+            <a href={plato.link} target="_blank" rel="noreferrer">
+              Ordenar Ahora
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+@import "../../global.scss";
+
+.carta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+
+  h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .platosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .plato {
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 300px;
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        max-height: 200px; /* Limita la altura de las imágenes */
+        border-radius: 8px;
+      }
+
+      h3 {
+        color: #444;
+      }
+
+      .precio {
+        color: #dd052b;
+        font-weight: bold;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: #2f49be;
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: #dd052b;
+        }
+      }
+    }
+  }
+}
+//src/components/Footer/App.css
+import React from "react";
+import "./Footer.scss";
+
+export default function Footer() {
+  return (
+    <footer className="footer">
+      <div className="footer-section">
+        <img src="assets/logotipo_sin fondo.png" alt="Mijuy Logo" className="footer-logo" />
+        <p>© 2024 Mijuy. Todos los derechos reservados.</p>
+      </div>
+      <div className="footer-section">
+        <h4>Contáctanos</h4>
+        <p>WhatsApp: +51 950276474</p>
+        <p>Email: contacto@mijuy.com</p>
+      </div>
+      <div className="footer-section">
+        <h4>Libro de Reclamaciones</h4>
+        <a href="/libro-reclamaciones">Ir al Libro de Reclamaciones</a>
+      </div>
+    </footer>
+  );
+}
+.footer {
+  width: 100%;
+  background-color: #2f49be;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer-section {
+  margin: 10px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  p, a {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .footer-logo {
+    width: 100px;
+    margin-bottom: 10px;
+  }
+}
