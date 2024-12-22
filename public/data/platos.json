@@ -14,6 +14,54 @@
       "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
       "precio": "15.70",
       "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
+    },
+    {
+      "id": "3",
+      "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
+      "title": "COMBO MEGA Alitas",
+      "desc": "10 alitas con 2 sabores a elección + papas y salchicha.",
+      "precio": "25.00",
+      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A."
+    },
+    {
+      "id": "4",
+      "img": "./assets/platos/hamburguesa_doble+.png",
+      "title": "Hamburguesa Doble Más",
+      "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
+      "precio": "15.70",
+      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
+    },
+    {
+      "id": "5",
+      "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
+      "title": "COMBO MEGA Alitas",
+      "desc": "10 alitas con 2 sabores a elección + papas y salchicha.",
+      "precio": "25.00",
+      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A."
+    },
+    {
+      "id": "6",
+      "img": "./assets/platos/hamburguesa_doble+.png",
+      "title": "Hamburguesa Doble Más",
+      "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
+      "precio": "15.70",
+      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
+    },
+    {
+      "id": "7",
+      "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
+      "title": "COMBO MEGA Alitas",
+      "desc": "10 alitas con 2 sabores a elección + papas y salchicha.",
+      "precio": "25.00",
+      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A."
+    },
+    {
+      "id": "8",
+      "img": "./assets/platos/hamburguesa_doble+.png",
+      "title": "Hamburguesa Doble Más",
+      "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
+      "precio": "15.70",
+      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
     }
   ]
   
