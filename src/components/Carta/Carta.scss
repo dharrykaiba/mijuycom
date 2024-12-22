@@ -6,6 +6,7 @@
   align-items: center;
   padding: 20px;
   background-color: $whiteColor;
+  margin-top: 80px;
 
   h2 {
     margin-bottom: 20px;
@@ -26,7 +27,7 @@
       width: 300px;
       text-align: center;
       transition: transform 0.3s ease-in-out;  // Añadir una animación sutil al pasar el mouse
-    
+  
 
       img {
         max-width: 100%;

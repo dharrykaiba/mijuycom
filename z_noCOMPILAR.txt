@@ -1,36 +1,25 @@
-import React, { useEffect } from "react";
-import "./App.scss";
-import Intro from "./components/Intro/Intro";
-import Carta from "./components/Carta/Carta";
+import React from "react"; 
+import "./App.scss"; 
+import Topbar from "./components/Topbar/Topbar"; 
+import Intro from "./components/Intro/Intro"; 
+import Carta from "./components/Carta/Carta"; 
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
-  useEffect(() => {
-    // Función para forzar que la primera sección ocupe toda la pantalla
-    const handleScroll = () => {
-      const firstSection = document.querySelector('.sections > *:first-child');
-      // Verificamos si el scroll ha llegado a la primera sección
-      if (window.scrollY >= firstSection.offsetTop) {
-        // Si es así, forzamos que la primera sección tenga una altura del 100vh
-        firstSection.style.height = '100vh';
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll); // Agregamos el event listener
-    return () => window.removeEventListener('scroll', handleScroll); // Limpiamos el event listener
-  }, []);
-
+  // Eliminar el handleScroll, ya que no es necesario manipular el scroll manualmente
   return (
     <div className="App">
+      <Topbar /> {/* Añadimos la Topbar */}
       <div className="sections">
         <Intro />
         <Carta />
-        <Footer /> {/* El footer ahora es parte del flujo normal */}
+        <Footer />
       </div>
     </div>
   );
 }
 @import "./global.scss";
+
 .App {
   display: flex;
   flex-direction: column;
@@ -38,8 +27,7 @@ export default function App() {
 
   .sections {
     flex-grow: 1;
-    overflow-y: auto;
-    margin: 0;
+    overflow-y: auto;  // Cambié 'scroll' por 'auto' para permitir el desplazamiento solo cuando sea necesario
     scroll-snap-type: y mandatory;
     height: 100vh;
 
@@ -48,6 +36,7 @@ export default function App() {
       width: 100%;
     }
 
+    /* No es necesario manipular el scroll de las siguientes secciones */
     & > *:first-child {
       height: 100vh;
     }
@@ -57,12 +46,7 @@ export default function App() {
       min-height: 100vh;
     }
   }
-
-  .space {
-    height: 100px; 
-  }
 }
-//src/components/Carta/App.jsx
 import React, { useState, useEffect } from "react";
 import "./Carta.scss";
 
@@ -106,6 +90,7 @@ export default function Carta() {
   align-items: center;
   padding: 20px;
   background-color: $whiteColor;
+  margin-top: 80px;
 
   h2 {
     margin-bottom: 20px;
@@ -119,12 +104,14 @@ export default function Carta() {
     gap: 20px;
 
     .plato {
-      background-color: $grayColor;
+      background-color: #f5f5f5;  // Un gris claro o un tono beige cálido
       border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  // Sombra más suave para mayor profundidad
       padding: 15px;
       width: 300px;
       text-align: center;
+      transition: transform 0.3s ease-in-out;  // Añadir una animación sutil al pasar el mouse
+  
 
       img {
         max-width: 100%;
@@ -151,7 +138,7 @@ export default function Carta() {
         border-radius: 5px;
 
         &:hover {
-          background-color: $buttonHoverColor;
+          transform: translateY(-10px);  // Efecto hover para mejorar la interacción visual
         }
       }
     }
@@ -162,7 +149,6 @@ export default function Carta() {
     width: 100%;
   }
 }
-//src/components/Footer/App.css
 import React from "react";
 import "./Footer.scss";
 
@@ -186,9 +172,10 @@ export default function Footer() {
   );
 }
 @import "../../global.scss";
+
 .footer {
   width: 100%;
-  background-color: $secondaryColor;
+  background-color: #1d1d1b;  // Color base más oscuro para que resalte el logo y el texto
   color: $whiteColor;
   display: flex;
   justify-content: space-around;
@@ -215,17 +202,18 @@ export default function Footer() {
   }
 
   .footer-logo {
-    width: 100px;
+    width: 120px;  // Un poco más grande para mejorar la visibilidad
     margin-bottom: 10px;
   }
 }
-// Definimos los colores globales basados en el logo y los colores opcionales
-$mainColor: #1d1d1b; // Color base
-$secondaryColor: #dc052b; // Rojo intenso
-$accentColor: #f29300; // Naranja
-$highlightColor: #ffd100; // Amarillo
-$whiteColor: #ffffff; // Blanco
-$grayColor: #b1afb0; // Gris suave
+// Definimos los colores globales mejorados
+$mainColor: #1d1d1b; // Color base (más oscuro para que no interfiera con el resto)
+$secondaryColor: #dc052b; // Rojo ligeramente atenuado para evitar sobrecargar
+$accentColor: #f29300; // Naranja cálido, con mayor saturación
+$highlightColor: #ffd100; // Amarillo vibrante, para dar contraste sin ser demasiado brillante
+$whiteColor: #ffffff; // Blanco (necesario para textos destacados)
+$grayColor: #f0f0f0; // Gris muy claro para mejorar el contraste
+
 
 // Otros colores
 $lineColor: #303030; // Gris oscuro para líneas
@@ -399,6 +387,137 @@ export default function Intro() {
         position: absolute;
         left: 45%;
       }
+    }
+  }
+}
+import React from "react";
+import "./Topbar.scss";
+import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
+
+export default function Topbar() {
+  return (
+    <div className="topbar">
+      <a href="#intro" className="logo">
+        mijuy.com
+      </a>
+      <div className="itemContainer">
+        <span>Escríbenos: </span>
+        <a
+          href="https://api.whatsapp.com/send?phone=51950276474&text=Hola! quiero hacer un pedido"
+          className="whatsapp-link"
+        >
+          950 276 474
+        </a>
+        <div className="itemContainer2">
+          <DeliveryDiningIcon className="icon" />
+          <span>¡Sabores únicos! Ordena en línea.</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+@import "../../global.scss";
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, #dc052b, #f29300);
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  flex-wrap: wrap;
+
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #ffd100;
+    }
+  }
+
+  .itemContainer {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-left: 20px;
+    flex-wrap: wrap;
+  }
+
+  .whatsapp-link {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      color: #ffd100;
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .itemContainer2 {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    overflow: hidden; /* Oculta el texto que sobrepase el contenedor */
+    text-overflow: ellipsis; /* Muestra "..." si el texto se corta */
+  }
+
+  .itemContainer2 span {
+    font-size: 16px;
+    margin-left: 10px;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Estilos para la versión móvil */
+  @media (max-width: 768px) {
+    .topbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px; /* Ajustamos el padding para móviles */
+    }
+
+    .logo {
+      font-size: 24px;
+    }
+
+    .itemContainer {
+      margin-top: 10px;
+      font-size: 14px; /* Reducimos el tamaño de la fuente */
+      justify-content: flex-start;
+    }
+
+    .itemContainer2 {
+      display: none; /* Eliminamos este contenedor en la versión móvil */
+    }
+
+    .itemContainer span {
+      font-size: 14px; /* Reducimos el tamaño de la fuente */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; /* Usa "..." si el texto es más largo */
     }
   }
 }

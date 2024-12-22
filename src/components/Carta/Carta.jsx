@@ -1,4 +1,3 @@
-//src/components/Carta/App.jsx
 import React, { useState, useEffect } from "react";
 import "./Carta.scss";
 
