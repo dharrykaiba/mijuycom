@@ -1,5 +1,4 @@
 @import "../../global.scss";
-
 .carta {
   display: flex;
   flex-direction: column;
@@ -55,5 +54,11 @@
         }
       }
     }
+  }
+
+  /* Espacio al final de la carta */
+  .space {
+    height: 300px; /* Ajusta la altura según el espacio que desees */
+    width: 100%;
   }
 }

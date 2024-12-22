@@ -28,6 +28,9 @@ export default function Carta() {
           </div>
         ))}
       </div>
+
+      {/* Espacio adicional al final de la carta */}
+      <div className="space"></div>
     </div>
   );
 }

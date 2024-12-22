@@ -31,27 +31,30 @@ export default function App() {
   );
 }
 .App {
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #c57fff;
 
   .sections {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow-y: auto; /* Permite desplazamiento vertical */
-  }
+    flex-grow: 1;
+    overflow-y: auto;
+    margin: 0;
+    scroll-snap-type: y mandatory; /* Activamos el scroll snapping */
+    height: 100vh; /* Aseguramos que el contenedor de las secciones tenga el alto correcto */
 
-  /* Hacemos sticky solo en la primera sección */
-  .sections > *:first-child {
-    position: sticky;
-    top: 0; /* Se queda en la parte superior al hacer scroll */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    z-index: 10; /* Asegura que esté por encima de las siguientes secciones */
-  }
+    & > * {
+      scroll-snap-align: start; /* Hacemos que todas las secciones se alineen al inicio */
+      width: 100%; /* Aseguramos que cada sección ocupe todo el ancho */
+    }
 
-  .sections > * {
-    flex: none;
-    height: 100vh; /* Cada sección ocupa toda la altura de la pantalla */
+    & > *:first-child {
+      height: 100vh; /* La primera sección ocupa toda la pantalla */
+    }
+
+    & > *:nth-child(2),
+    & > *:nth-child(3) {
+      min-height: 100vh; /* Las otras secciones también deben ocupar al menos toda la pantalla */
+    }
   }
 }
 //src/components/Carta/App.jsx

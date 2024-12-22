@@ -7,12 +7,25 @@
     flex-grow: 1;
     overflow-y: auto;
     margin: 0;
+    scroll-snap-type: y mandatory; /* Activamos el scroll snapping */
+    height: 100vh; /* Aseguramos que el contenedor de las secciones tenga el alto correcto */
+
+    & > * {
+      scroll-snap-align: start; /* Hacemos que todas las secciones se alineen al inicio */
+      width: 100%; /* Aseguramos que cada sección ocupe todo el ancho */
+    }
 
     & > *:first-child {
-      height: 100vh; // La primera sección ocupa toda la pantalla inicialmente
-      position: sticky; // Hacemos que la primera sección sea "pegajosa"
-      top: 0; // Se quedará pegada a la parte superior cuando el scroll llegue a ella
-      z-index: 10; // Aseguramos que esta sección esté por encima de las siguientes
+      height: 100vh; /* La primera sección ocupa toda la pantalla */
+    }
+
+    & > *:nth-child(2),
+    & > *:nth-child(3) {
+      min-height: 100vh; /* Las otras secciones también deben ocupar al menos toda la pantalla */
     }
   }
+  .space {
+  height: 100px; /* Puedes ajustar este valor según lo que necesites */
+}
+
 }
