@@ -1,8 +1,11 @@
+
 @import "../../global.scss";
 
 .intro {
   background-color: $mainColor;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; // Ajuste automático de los elementos en varias filas si es necesario
 
   @include mobile {
     flex-direction: column;
@@ -12,26 +15,30 @@
   .left {
     flex: 0.5;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .imgContainer {
-      width: 600px;
-      height: 600px;
+      width: 100%; // Asegura que la imagen ocupe todo el ancho disponible
+      max-width: 500px; // Limita el tamaño máximo en pantallas grandes
+      height: auto;
       background-color: $mainColor;
-      border-radius: 60%;
+      border-radius: 50%; // Mantiene la forma circular
       display: flex;
-      align-items: flex-start;
       justify-content: center;
-      float: right;
+      align-items: center;
       margin-top: 10px;
 
       @include mobile {
-        width: 300px;
-        height: 300px;
-        align-items: flex-start;
+        width: 70%; // Ajusta el tamaño en dispositivos móviles
+        height: auto;
         border-radius: 50%;
       }
 
       img {
-        height: 95%;
+        max-width: 100%;
+        height: auto; // Mantiene la imagen proporcional
       }
     }
   }
@@ -39,6 +46,10 @@
   .right {
     flex: 0.5;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; // Asegura que ocupe el 100% en pantallas pequeñas
 
     .weapper {
       width: 90%;
@@ -47,38 +58,39 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
 
       @include mobile {
-        padding-left: 35px;
+        padding-left: 20px; // Ajuste de espaciado en dispositivos móviles
         align-items: center;
-        justify-content: flex-start;
+        text-align: center; // Alineación de texto para móviles
       }
 
       h1 {
-        font-size: 30px;
+        font-size: clamp(18px, 5vw, 28px); // Tamaño fluido que se adapta al ancho
         margin: 10px 0;
         color: $whiteColor;
 
         @include mobile {
-          font-size: 20px;
+          font-size: clamp(16px, 5vw, 22px); // Ajuste para dispositivos móviles
         }
       }
 
       h2 {
-        font-size: 55px;
+        font-size: clamp(24px, 6vw, 40px); // Usamos clamp() para un tamaño fluido
         color: $highlightColor;
 
         @include mobile {
-          font-size: 30px;
+          font-size: clamp(20px, 6vw, 30px); // Ajuste para dispositivos pequeños
         }
       }
 
       h3 {
-        font-size: 30px;
+        font-size: clamp(18px, 4vw, 26px); // Tamaño fluido ajustado
         color: $secondaryColor;
 
         @include mobile {
-          font-size: 20px;
+          font-size: clamp(14px, 4vw, 18px); // Ajuste en móviles
         }
 
         span {
@@ -99,12 +111,22 @@
           }
         }
       }
+
+      h4 {
+        font-size: clamp(14px, 3vw, 18px); // Ajuste para el texto más pequeño
+        color: $whiteColor;
+
+        @include mobile {
+          font-size: clamp(12px, 3vw, 16px); // Ajuste en móviles
+        }
+      }
     }
 
     a {
       position: absolute;
       bottom: 60px;
-      left: 40%;
+      left: 50%; // Centra el botón en pantallas grandes
+      transform: translateX(-50%); // Asegura que se mantenga centrado
       img {
         width: 60px;
         animation: arrowBlink 2s infinite;
@@ -118,7 +140,8 @@
 
       @include mobile {
         position: absolute;
-        left: 45%;
+        left: 50%;
+        transform: translateX(-50%); // Centra el botón también en dispositivos móviles
       }
     }
   }

@@ -9,7 +9,8 @@ export default function Topbar() {
         mijuy.com
       </a>
       <div className="itemContainer">
-        <span>Escríbenos: </span>
+        <span>Escríbenos:  </span>
+        <DeliveryDiningIcon className="icon" />
         <a
           href="https://api.whatsapp.com/send?phone=51950276474&text=Hola! quiero hacer un pedido"
           className="whatsapp-link"
@@ -17,7 +18,7 @@ export default function Topbar() {
           950 276 474
         </a>
         <div className="itemContainer2">
-          <DeliveryDiningIcon className="icon" />
+          
           <span>¡Sabores únicos! Ordena en línea.</span>
         </div>
       </div>
