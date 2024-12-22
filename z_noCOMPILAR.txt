@@ -30,36 +30,37 @@ export default function App() {
     </div>
   );
 }
+@import "./global.scss";
 .App {
   display: flex;
   flex-direction: column;
-  background-color: #c57fff;
+  background-color: $mainColor;
 
   .sections {
     flex-grow: 1;
     overflow-y: auto;
     margin: 0;
-    scroll-snap-type: y mandatory; /* Activamos el scroll snapping */
-    height: 100vh; /* Aseguramos que el contenedor de las secciones tenga el alto correcto */
+    scroll-snap-type: y mandatory;
+    height: 100vh;
 
     & > * {
-      scroll-snap-align: start; /* Hacemos que todas las secciones se alineen al inicio */
-      width: 100%; /* Aseguramos que cada sección ocupe todo el ancho */
+      scroll-snap-align: start;
+      width: 100%;
     }
 
     & > *:first-child {
-      height: 100vh; /* La primera sección ocupa toda la pantalla */
+      height: 100vh;
     }
 
     & > *:nth-child(2),
     & > *:nth-child(3) {
-      min-height: 100vh; /* Las otras secciones también deben ocupar al menos toda la pantalla */
+      min-height: 100vh;
     }
   }
-  .space {
-  height: 100px; /* Puedes ajustar este valor según lo que necesites */
-}
 
+  .space {
+    height: 100px; 
+  }
 }
 //src/components/Carta/App.jsx
 import React, { useState, useEffect } from "react";
@@ -98,16 +99,17 @@ export default function Carta() {
   );
 }
 @import "../../global.scss";
+
 .carta {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #fff;
+  background-color: $whiteColor;
 
   h2 {
     margin-bottom: 20px;
-    color: #333;
+    color: $lineColor;
   }
 
   .platosContainer {
@@ -117,7 +119,7 @@ export default function Carta() {
     gap: 20px;
 
     .plato {
-      background-color: #f9f9f9;
+      background-color: $grayColor;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       padding: 15px;
@@ -126,38 +128,37 @@ export default function Carta() {
 
       img {
         max-width: 100%;
-        max-height: 200px; /* Limita la altura de las imágenes */
+        max-height: 200px;
         border-radius: 8px;
       }
 
       h3 {
-        color: #444;
+        color: $lineColor;
       }
 
       .precio {
-        color: #dd052b;
+        color: $secondaryColor;
         font-weight: bold;
       }
 
       a {
         display: inline-block;
         margin-top: 10px;
-        background-color: #2f49be;
-        color: #fff;
+        background-color: $accentColor;
+        color: $whiteColor;
         padding: 10px 15px;
         text-decoration: none;
         border-radius: 5px;
 
         &:hover {
-          background-color: #dd052b;
+          background-color: $buttonHoverColor;
         }
       }
     }
   }
 
-  /* Espacio al final de la carta */
   .space {
-    height: 300px; /* Ajusta la altura según el espacio que desees */
+    height: 300px;
     width: 100%;
   }
 }
@@ -184,10 +185,11 @@ export default function Footer() {
     </footer>
   );
 }
+@import "../../global.scss";
 .footer {
   width: 100%;
-  background-color: #2f49be;
-  color: #fff;
+  background-color: $secondaryColor;
+  color: $whiteColor;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -205,7 +207,7 @@ export default function Footer() {
 
   p, a {
     font-size: 14px;
-    color: #fff;
+    color: $whiteColor;
   }
 
   a {
@@ -217,23 +219,20 @@ export default function Footer() {
     margin-bottom: 10px;
   }
 }
+// Definimos los colores globales basados en el logo y los colores opcionales
+$mainColor: #1d1d1b; // Color base
+$secondaryColor: #dc052b; // Rojo intenso
+$accentColor: #f29300; // Naranja
+$highlightColor: #ffd100; // Amarillo
+$whiteColor: #ffffff; // Blanco
+$grayColor: #b1afb0; // Gris suave
 
+// Otros colores
+$lineColor: #303030; // Gris oscuro para líneas
+$lightTextColor: #b6b6b6; // Texto más claro
+$buttonHoverColor: #dd052b; // Color de hover de los botones
 
-
-$mainColor: #141212;
-$SecondColor: #E30613;
-$SecondColorB: #79040ee3;
-$TercerColor: #141212;
-$FourColor:#ffd000d2;
-$LineColor: #303030;
-$TitleColor:#b6b6b6;
-$TonoBlanco:#ffffff;
-$Tonomorado:#61c9a8bd;
-
-$YellowColor:#e06c00b9;
-$GreenColor:#beff26d3;
-$RedColor: #e64c57;
-
+// Definición de mixins
 $width: 799px;
 
 @mixin mobile {
@@ -281,7 +280,7 @@ export default function Intro() {
 @import "../../global.scss";
 
 .intro {
-  background-color: $TercerColor;
+  background-color: $mainColor;
   display: flex;
 
   @include mobile {
@@ -295,7 +294,7 @@ export default function Intro() {
     .imgContainer {
       width: 600px;
       height: 600px;
-      background-color: $TercerColor;
+      background-color: $mainColor;
       border-radius: 60%;
       display: flex;
       align-items: flex-start;
@@ -309,17 +308,17 @@ export default function Intro() {
         align-items: flex-start;
         border-radius: 50%;
       }
+
       img {
         height: 95%;
-        @include mobile {
-          height: 95%;
-        }
       }
     }
   }
+
   .right {
     flex: 0.5;
     position: relative;
+
     .weapper {
       width: 90%;
       height: 100%;
@@ -331,41 +330,45 @@ export default function Intro() {
       @include mobile {
         padding-left: 35px;
         align-items: center;
-        justify-content:flex-start
+        justify-content: flex-start;
       }
 
       h1 {
         font-size: 30px;
         margin: 10px 0;
-        color: #fff;
+        color: $whiteColor;
 
         @include mobile {
           font-size: 20px;
         }
       }
+
       h2 {
         font-size: 55px;
-        color: #ffd100;
+        color: $highlightColor;
+
         @include mobile {
           font-size: 30px;
-          
         }
       }
+
       h3 {
         font-size: 30px;
-        color: #dd052b;
+        color: $secondaryColor;
+
         @include mobile {
           font-size: 20px;
-;
         }
 
         span {
           font-size: inherit;
-          color: #dd052b;
+          color: $secondaryColor;
         }
+
         .ityped-cursor {
           animation: blink 1s infinite;
         }
+
         @keyframes blink {
           50% {
             opacity: 1;
@@ -376,6 +379,7 @@ export default function Intro() {
         }
       }
     }
+
     a {
       position: absolute;
       bottom: 60px;
@@ -390,6 +394,7 @@ export default function Intro() {
           opacity: 20%;
         }
       }
+
       @include mobile {
         position: absolute;
         left: 45%;
