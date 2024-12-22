@@ -1,20 +1,17 @@
+// Definimos los colores globales basados en el logo y los colores opcionales
+$mainColor: #1d1d1b; // Color base
+$secondaryColor: #dc052b; // Rojo intenso
+$accentColor: #f29300; // Naranja
+$highlightColor: #ffd100; // Amarillo
+$whiteColor: #ffffff; // Blanco
+$grayColor: #b1afb0; // Gris suave
 
+// Otros colores
+$lineColor: #303030; // Gris oscuro para líneas
+$lightTextColor: #b6b6b6; // Texto más claro
+$buttonHoverColor: #dd052b; // Color de hover de los botones
 
-
-$mainColor: #141212;
-$SecondColor: #E30613;
-$SecondColorB: #79040ee3;
-$TercerColor: #141212;
-$FourColor:#ffd000d2;
-$LineColor: #303030;
-$TitleColor:#b6b6b6;
-$TonoBlanco:#ffffff;
-$Tonomorado:#61c9a8bd;
-
-$YellowColor:#e06c00b9;
-$GreenColor:#beff26d3;
-$RedColor: #e64c57;
-
+// Definición de mixins
 $width: 799px;
 
 @mixin mobile {

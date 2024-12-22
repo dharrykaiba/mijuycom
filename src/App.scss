@@ -1,31 +1,32 @@
+@import "./global.scss";
 .App {
   display: flex;
   flex-direction: column;
-  background-color: #c57fff;
+  background-color: $mainColor;
 
   .sections {
     flex-grow: 1;
     overflow-y: auto;
     margin: 0;
-    scroll-snap-type: y mandatory; /* Activamos el scroll snapping */
-    height: 100vh; /* Aseguramos que el contenedor de las secciones tenga el alto correcto */
+    scroll-snap-type: y mandatory;
+    height: 100vh;
 
     & > * {
-      scroll-snap-align: start; /* Hacemos que todas las secciones se alineen al inicio */
-      width: 100%; /* Aseguramos que cada sección ocupe todo el ancho */
+      scroll-snap-align: start;
+      width: 100%;
     }
 
     & > *:first-child {
-      height: 100vh; /* La primera sección ocupa toda la pantalla */
+      height: 100vh;
     }
 
     & > *:nth-child(2),
     & > *:nth-child(3) {
-      min-height: 100vh; /* Las otras secciones también deben ocupar al menos toda la pantalla */
+      min-height: 100vh;
     }
   }
-  .space {
-  height: 100px; /* Puedes ajustar este valor según lo que necesites */
-}
 
+  .space {
+    height: 100px; 
+  }
 }

@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .intro {
-  background-color: $TercerColor;
+  background-color: $mainColor;
   display: flex;
 
   @include mobile {
@@ -15,7 +15,7 @@
     .imgContainer {
       width: 600px;
       height: 600px;
-      background-color: $TercerColor;
+      background-color: $mainColor;
       border-radius: 60%;
       display: flex;
       align-items: flex-start;
@@ -29,17 +29,17 @@
         align-items: flex-start;
         border-radius: 50%;
       }
+
       img {
         height: 95%;
-        @include mobile {
-          height: 95%;
-        }
       }
     }
   }
+
   .right {
     flex: 0.5;
     position: relative;
+
     .weapper {
       width: 90%;
       height: 100%;
@@ -51,41 +51,45 @@
       @include mobile {
         padding-left: 35px;
         align-items: center;
-        justify-content:flex-start
+        justify-content: flex-start;
       }
 
       h1 {
         font-size: 30px;
         margin: 10px 0;
-        color: #fff;
+        color: $whiteColor;
 
         @include mobile {
           font-size: 20px;
         }
       }
+
       h2 {
         font-size: 55px;
-        color: #ffd100;
+        color: $highlightColor;
+
         @include mobile {
           font-size: 30px;
-          
         }
       }
+
       h3 {
         font-size: 30px;
-        color: #dd052b;
+        color: $secondaryColor;
+
         @include mobile {
           font-size: 20px;
-;
         }
 
         span {
           font-size: inherit;
-          color: #dd052b;
+          color: $secondaryColor;
         }
+
         .ityped-cursor {
           animation: blink 1s infinite;
         }
+
         @keyframes blink {
           50% {
             opacity: 1;
@@ -96,6 +100,7 @@
         }
       }
     }
+
     a {
       position: absolute;
       bottom: 60px;
@@ -110,6 +115,7 @@
           opacity: 20%;
         }
       }
+
       @include mobile {
         position: absolute;
         left: 45%;

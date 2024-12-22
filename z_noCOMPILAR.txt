@@ -56,6 +56,10 @@ export default function App() {
       min-height: 100vh; /* Las otras secciones también deben ocupar al menos toda la pantalla */
     }
   }
+  .space {
+  height: 100px; /* Puedes ajustar este valor según lo que necesites */
+}
+
 }
 //src/components/Carta/App.jsx
 import React, { useState, useEffect } from "react";
@@ -87,11 +91,13 @@ export default function Carta() {
           </div>
         ))}
       </div>
+
+      {/* Espacio adicional al final de la carta */}
+      <div className="space"></div>
     </div>
   );
 }
 @import "../../global.scss";
-
 .carta {
   display: flex;
   flex-direction: column;
@@ -148,6 +154,12 @@ export default function Carta() {
       }
     }
   }
+
+  /* Espacio al final de la carta */
+  .space {
+    height: 300px; /* Ajusta la altura según el espacio que desees */
+    width: 100%;
+  }
 }
 //src/components/Footer/App.css
 import React from "react";
@@ -203,5 +215,185 @@ export default function Footer() {
   .footer-logo {
     width: 100px;
     margin-bottom: 10px;
+  }
+}
+
+
+
+$mainColor: #141212;
+$SecondColor: #E30613;
+$SecondColorB: #79040ee3;
+$TercerColor: #141212;
+$FourColor:#ffd000d2;
+$LineColor: #303030;
+$TitleColor:#b6b6b6;
+$TonoBlanco:#ffffff;
+$Tonomorado:#61c9a8bd;
+
+$YellowColor:#e06c00b9;
+$GreenColor:#beff26d3;
+$RedColor: #e64c57;
+
+$width: 799px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
+import "./intro.scss";
+import { init } from "ityped";
+import { useEffect, useRef } from "react";
+
+export default function Intro() {
+  const textRef = useRef();
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: true,
+      backDelay: 1500,
+      backSpeed: 60,
+      strings: ["Pizzas", "Alitas", "Hamburguesas", "Salchipapas"],
+    });
+  }, []);
+  return (
+    <div className="intro" id="intro">
+      <div className="left">
+        <div className="imgContainer">
+          <img src="assets/logotipo_sin fondo.png" alt="" />
+        </div>
+      </div>
+      <div className="right">
+        <div className="weapper">
+          <h2>¡ Bienvenido a Mijuy !</h2>
+          <h1>¡Despliega hacia abajo y sumérgete en una experiencia única! Disfruta de sabores auténticos en cada bocado. 🍕🍔🎉</h1>
+          <h1>Tambien estamos por TELEGRAM: 950276474</h1>
+          <h3>
+            Aprovecha nuestros descuentos del 20% en varios platos, delivery Gratis para la Alameda Salaverry y Santa Rita: <span ref={textRef}></span>
+          </h3>
+        </div>
+        <a href="#carta">
+          <img src="assets/down_red.png" alt="" />
+        </a>
+      </div>
+    </div>
+  );
+}
+@import "../../global.scss";
+
+.intro {
+  background-color: $TercerColor;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+    .imgContainer {
+      width: 600px;
+      height: 600px;
+      background-color: $TercerColor;
+      border-radius: 60%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      float: right;
+      margin-top: 10px;
+
+      @include mobile {
+        width: 300px;
+        height: 300px;
+        align-items: flex-start;
+        border-radius: 50%;
+      }
+      img {
+        height: 95%;
+        @include mobile {
+          height: 95%;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 0.5;
+    position: relative;
+    .weapper {
+      width: 90%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mobile {
+        padding-left: 35px;
+        align-items: center;
+        justify-content:flex-start
+      }
+
+      h1 {
+        font-size: 30px;
+        margin: 10px 0;
+        color: #fff;
+
+        @include mobile {
+          font-size: 20px;
+        }
+      }
+      h2 {
+        font-size: 55px;
+        color: #ffd100;
+        @include mobile {
+          font-size: 30px;
+          
+        }
+      }
+      h3 {
+        font-size: 30px;
+        color: #dd052b;
+        @include mobile {
+          font-size: 20px;
+;
+        }
+
+        span {
+          font-size: inherit;
+          color: #dd052b;
+        }
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 60px;
+      left: 40%;
+      img {
+        width: 60px;
+        animation: arrowBlink 2s infinite;
+      }
+
+      @keyframes arrowBlink {
+        80% {
+          opacity: 20%;
+        }
+      }
+      @include mobile {
+        position: absolute;
+        left: 45%;
+      }
+    }
   }
 }
