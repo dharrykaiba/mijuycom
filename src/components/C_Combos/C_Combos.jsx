@@ -15,7 +15,7 @@ export default function C_Combos() {
     {
       id: "2",
       icon: "./assets/hamburguesa_doble+.jpg",
-      title: "COMBO MEGA Alitas",
+      title: "Hamburguesa doble Plus",
       link: "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A.%0ACon cremas: %0APago con Yape o Efectivo.",
       desc: "🔥02 discos de carne, tomate, lechuga, huevo y queso fundido + papas 🍟 + Pepsi 500ml.",
       img: "./assets/platos/hamburguesa_doble+.png",

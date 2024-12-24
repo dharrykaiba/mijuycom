@@ -1,67 +1,106 @@
 [
-    {
-      "id": "1",
-      "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
-      "title": "COMBO MEGA Alitas",
-      "desc": "10 alitas con 2 sabores a elección + papas y salchicha.",
-      "precio": "25.00",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A."
-    },
-    {
-      "id": "2",
-      "img": "./assets/platos/hamburguesa_doble+.png",
-      "title": "Hamburguesa Doble Más",
-      "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
-      "precio": "15.70",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
-    },
-    {
-      "id": "3",
-      "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
-      "title": "COMBO MEGA Alitas",
-      "desc": "10 alitas con 2 sabores a elección + papas y salchicha.",
-      "precio": "25.00",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A."
-    },
-    {
-      "id": "4",
-      "img": "./assets/platos/hamburguesa_doble+.png",
-      "title": "Hamburguesa Doble Más",
-      "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
-      "precio": "15.70",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
-    },
-    {
-      "id": "5",
-      "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
-      "title": "COMBO MEGA Alitas",
-      "desc": "10 alitas con 2 sabores a elección + papas y salchicha.",
-      "precio": "25.00",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A."
-    },
-    {
-      "id": "6",
-      "img": "./assets/platos/hamburguesa_doble+.png",
-      "title": "Hamburguesa Doble Más",
-      "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
-      "precio": "15.70",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
-    },
-    {
-      "id": "7",
-      "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
-      "title": "COMBO MEGA Alitas",
-      "desc": "10 alitas con 2 sabores a elección + papas y salchicha.",
-      "precio": "25.00",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A."
-    },
-    {
-      "id": "8",
-      "img": "./assets/platos/hamburguesa_doble+.png",
-      "title": "Hamburguesa Doble Más",
-      "desc": "02 discos de carne, tomate, lechuga, huevo y queso fundido + papas + Pepsi 500ml.",
-      "precio": "15.70",
-      "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A."
-    }
-  ]
-  
+  {
+    "id": "1",
+    "img": "./assets/platos/alitas_bbq1.png",
+    "icon": "./assets/logo_rojo_naranja_blanco-09.jpg",
+    "title": "Alitas BBQ",
+    "desc": "5 alitas BBQ con papas y salchicha. ¡Un combo irresistiblemente delicioso! 🍗",
+    "precio": "14.00",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas BBQ%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+    "tipo": "Alitas",
+    "vigente": true,
+    "stock": 99,
+    "promocion": false
+  },
+  {
+    "id": "2",
+    "img": "./assets/platos/alitas_broaster1.png",
+    "icon": "./assets/logo_rojo_naranja_blanco-09.jpg",
+    "title": "Alitas Broaster",
+    "desc": "5 alitas Broaster con papas y salchicha. ¡Crujientes y deliciosas! 🍟",
+    "precio": "14.00",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas Broaster%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+    "tipo": "Alitas",
+    "vigente": true,
+    "stock": 99,
+    "promocion": false
+  },
+  {
+    "id": "3",
+    "img": "./assets/platos/alitas_acevichadas.png",
+    "icon": "./assets/logo_rojo_naranja_blanco-09.jpg",
+    "title": "Acevichadas",
+    "desc": "🌶️🍗 Un festín fresco y picante que deleitará tu paladar. 5 Alitas acevichadas acompañadas de papas y salchicha 🚀",
+    "precio": "14.00",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas Acevichadas%2A 🌶️ para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+    "tipo": "Alitas",
+    "vigente": true,
+    "stock": 99,
+    "promocion": false
+  },
+  {
+    "id": "4",
+    "img": "./assets/platos/hamburguesa_clasica.png",
+    "icon": "./assets/logo_rojo_naranja_blanco-09.jpg",
+    "title": "Clásica de Carne",
+    "desc": "Deléitate con nuestra Hamburguesa Clásica de carne jugosa. 🍔 Una experiencia auténtica y sabor inigualable.",
+    "precio": "9.00",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa Clasica%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+    "tipo": "Hamburguesas",
+    "vigente": true,
+    "stock": 99,
+    "promocion": false
+  },
+  {
+    "id": "5",
+    "img": "./assets/platos/hamburguesa_doble_low.png",
+    "icon": "./assets/logo_rojo_naranja_blanco-09.jpg",
+    "title": "Doble de Carne",
+    "desc": "¡Doble placer, doble sabor! Lleva una Hamburguesa de Carne Doble con doble porción de la clásica jugosidad. 🍔",
+    "precio": "13.90",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa con Doble de Carne%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+    "tipo": "Hamburguesas",
+    "vigente": true,
+    "stock": 99,
+    "promocion": false
+  },
+  {
+    "id": "6",
+    "img": "./assets/platos/COMBO_MEGA_ALITAS.png",
+    "icon": "./assets/logo_rojo_naranja_blanco-09.jpg",
+    "title": "COMBO MEGA Alitas",
+    "desc": "🍗🔥 ¡Disfruta de 10 alitas con 2 sabores a elección, acompañadas de papas y salchicha! 🍟🌭",
+    "precio": "25.00",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame el %2ACombo MEGA Alitas%2A.%0ACon cremas: %0APago con Yape o Efectivo.%0A 2 Sabores: ",
+    "tipo": "Alitas",
+    "vigente": true,
+    "stock": 99,
+    "promocion": true
+  },
+  {
+    "id": "7",
+    "img": "./assets/platos/hamburguesa_doble+.png",
+    "icon": "./assets/hamburguesa_doble+.jpg",
+    "title": "Hamburguesa doble Plus",
+    "desc": "🔥02 discos de carne, tomate, lechuga, huevo y queso fundido + papas 🍟 + Pepsi 500ml.",
+    "precio": "15.70",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame la %2AHamburguesa Doble Mas %2A.%0ACon cremas: %0APago con Yape o Efectivo.",
+    "tipo": "Hamburguesas",
+    "vigente": false,
+    "stock": 99,
+    "promocion": true
+  },
+  {
+    "id": "8",
+    "img": "./assets/platos/salchipapa_combinada.png",
+    "icon": "./assets/logo_rojo_naranja_blanco-09.jpg",
+    "title": "Salchipapa Combinada",
+    "desc": "Experimenta la Sachipapa de Mijuy: papas crocantes, salchicha clásica y ahumada en una deliciosa combinación. 🥔🌭",
+    "precio": "8.00",
+    "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2ASalchipapa Combinada%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
+    "tipo": "Salchipapas",
+    "vigente": true,
+    "stock": 99,
+    "promocion": false
+  }
+]

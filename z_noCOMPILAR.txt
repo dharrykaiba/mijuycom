@@ -1,17 +1,14 @@
-import React from "react"; 
-import "./App.scss"; 
-import Topbar from "./components/Topbar/Topbar"; 
-import Intro from "./components/Intro/Intro"; 
-import Carta from "./components/Carta/Carta"; 
+import React from "react";
+import "./App.scss";
+import Topbar from "./components/Topbar/Topbar";
+import Carta from "./components/Carta/Carta";
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
-  // Eliminar el handleScroll, ya que no es necesario manipular el scroll manualmente
   return (
     <div className="App">
       <Topbar /> {/* Añadimos la Topbar */}
       <div className="sections">
-        <Intro />
         <Carta />
         <Footer />
       </div>
@@ -27,39 +24,27 @@ export default function App() {
 
   .sections {
     flex-grow: 1;
-    overflow-y: auto; // Cambié 'scroll' por 'auto' para permitir el desplazamiento solo cuando sea necesario
-    scroll-snap-type: y mandatory;
-    height: 100vh;
+    overflow-y: auto;  // Permitir desplazamiento solo cuando sea necesario
+    
 
-    /* Personalizar el scroll */
+    /* Personalización del scrollbar */
     &::-webkit-scrollbar {
-      width: 8px; /* Establecer el ancho del scrollbar */
+      width: 8px; 
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $accentColor; /* Color del thumb del scrollbar */
-      border-radius: 10px; /* Bordes redondeados */
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: $grayColor; /* Color del fondo del track */
+      background-color: $accentColor; 
       border-radius: 10px;
     }
 
-    & > * {
-      scroll-snap-align: start;
-      width: 100%;
+    &::-webkit-scrollbar-track {
+      background-color: $grayColor; 
+      border-radius: 10px;
     }
 
-    /* No es necesario manipular el scroll de las siguientes secciones */
-    & > *:first-child {
-      height: 100vh;
-    }
 
-    & > *:nth-child(2),
-    & > *:nth-child(3) {
-      min-height: 100vh;
-    }
+
+   
   }
 }
 import React, { useState, useEffect } from "react";
@@ -105,8 +90,7 @@ export default function Carta() {
   align-items: center;
   padding: 20px;
   background-color: $whiteColor;
-  margin-top: 80px;
-
+  
   h2 {
     margin-bottom: 20px;
     color: $lineColor;
@@ -123,10 +107,9 @@ export default function Carta() {
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  // Sombra más suave para mayor profundidad
       padding: 15px;
-      width: 300px;
+      width: 250px;
       text-align: center;
       transition: transform 0.3s ease-in-out;  // Añadir una animación sutil al pasar el mouse
-  
 
       img {
         max-width: 100%;
@@ -161,7 +144,6 @@ export default function Carta() {
 
   .space {
     height: 300px;
-    width: 100%;
   }
 }
 import React from "react";
@@ -190,14 +172,14 @@ export default function Footer() {
 
 .footer {
   width: 100%;
-  background-color: #1d1d1b;  // Color base más oscuro para que resalte el logo y el texto
+  background-color: #333333;  // Fondo más oscuro para el footer
   color: $whiteColor;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  
 }
 
 .footer-section {
@@ -249,42 +231,45 @@ import { useEffect, useRef } from "react";
 
 export default function Intro() {
   const textRef = useRef();
+
   useEffect(() => {
     init(textRef.current, {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ["Pizzas", "Alitas", "Hamburguesas", "Salchipapas"],
+      strings: ["Alitas", "Hamburguesas", "Salchipapas"],
     });
   }, []);
+
   return (
     <div className="intro" id="intro">
       <div className="left">
         <div className="imgContainer">
-          <img src="assets/logotipo_sin fondo.png" alt="" />
+          <img src="assets/logotipo_sin fondo.png" alt="Mijuy logo" />
         </div>
       </div>
       <div className="right">
         <div className="weapper">
-          <h2>¡ Bienvenido a Mijuy !</h2>
-          <h1>¡Despliega hacia abajo y sumérgete en una experiencia única! Disfruta de sabores auténticos en cada bocado. 🍕🍔🎉</h1>
-          <h1>Tambien estamos por TELEGRAM: 950276474</h1>
-          <h3>
-            Aprovecha nuestros descuentos del 20% en varios platos, delivery Gratis para la Alameda Salaverry y Santa Rita: <span ref={textRef}></span>
-          </h3>
+          <h2>¡Bienvenido a Mijuy!</h2>
+          <h1>¡Disfruta sabores auténticos! 🍕🍔🎉</h1>
+          <h3>Delivery gratis para la Alameda Salaverry y Santa Rita: <span ref={textRef}></span></h3>
+          
         </div>
         <a href="#carta">
-          <img src="assets/down_red.png" alt="" />
+          <img src="assets/down_red.png" alt="Desplazar hacia abajo" />
         </a>
       </div>
     </div>
   );
 }
+
 @import "../../global.scss";
 
 .intro {
   background-color: $mainColor;
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; // Ajuste automático de los elementos en varias filas si es necesario
 
   @include mobile {
     flex-direction: column;
@@ -294,26 +279,30 @@ export default function Intro() {
   .left {
     flex: 0.5;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     .imgContainer {
-      width: 600px;
-      height: 600px;
+      width: 100%; // Asegura que la imagen ocupe todo el ancho disponible
+      max-width: 500px; // Limita el tamaño máximo en pantallas grandes
+      height: auto;
       background-color: $mainColor;
-      border-radius: 60%;
+      border-radius: 50%; // Mantiene la forma circular
       display: flex;
-      align-items: flex-start;
       justify-content: center;
-      float: right;
+      align-items: center;
       margin-top: 10px;
 
       @include mobile {
-        width: 300px;
-        height: 300px;
-        align-items: flex-start;
+        width: 70%; // Ajusta el tamaño en dispositivos móviles
+        height: auto;
         border-radius: 50%;
       }
 
       img {
-        height: 95%;
+        max-width: 100%;
+        height: auto; // Mantiene la imagen proporcional
       }
     }
   }
@@ -321,6 +310,10 @@ export default function Intro() {
   .right {
     flex: 0.5;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; // Asegura que ocupe el 100% en pantallas pequeñas
 
     .weapper {
       width: 90%;
@@ -329,38 +322,39 @@ export default function Intro() {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: flex-start;
 
       @include mobile {
-        padding-left: 35px;
+        padding-left: 20px; // Ajuste de espaciado en dispositivos móviles
         align-items: center;
-        justify-content: flex-start;
+        text-align: center; // Alineación de texto para móviles
       }
 
       h1 {
-        font-size: 30px;
+        font-size: clamp(18px, 5vw, 28px); // Tamaño fluido que se adapta al ancho
         margin: 10px 0;
         color: $whiteColor;
 
         @include mobile {
-          font-size: 20px;
+          font-size: clamp(16px, 5vw, 22px); // Ajuste para dispositivos móviles
         }
       }
 
       h2 {
-        font-size: 55px;
+        font-size: clamp(24px, 6vw, 40px); // Usamos clamp() para un tamaño fluido
         color: $highlightColor;
 
         @include mobile {
-          font-size: 30px;
+          font-size: clamp(20px, 6vw, 30px); // Ajuste para dispositivos pequeños
         }
       }
 
       h3 {
-        font-size: 30px;
+        font-size: clamp(18px, 4vw, 26px); // Tamaño fluido ajustado
         color: $secondaryColor;
 
         @include mobile {
-          font-size: 20px;
+          font-size: clamp(14px, 4vw, 18px); // Ajuste en móviles
         }
 
         span {
@@ -381,12 +375,22 @@ export default function Intro() {
           }
         }
       }
+
+      h4 {
+        font-size: clamp(14px, 3vw, 18px); // Ajuste para el texto más pequeño
+        color: $whiteColor;
+
+        @include mobile {
+          font-size: clamp(12px, 3vw, 16px); // Ajuste en móviles
+        }
+      }
     }
 
     a {
       position: absolute;
       bottom: 60px;
-      left: 40%;
+      left: 50%; // Centra el botón en pantallas grandes
+      transform: translateX(-50%); // Asegura que se mantenga centrado
       img {
         width: 60px;
         animation: arrowBlink 2s infinite;
@@ -400,7 +404,8 @@ export default function Intro() {
 
       @include mobile {
         position: absolute;
-        left: 45%;
+        left: 50%;
+        transform: translateX(-50%); // Centra el botón también en dispositivos móviles
       }
     }
   }
@@ -416,7 +421,8 @@ export default function Topbar() {
         mijuy.com
       </a>
       <div className="itemContainer">
-        <span>Escríbenos: </span>
+        <span>Escríbenos:  </span>
+        <DeliveryDiningIcon className="icon" />
         <a
           href="https://api.whatsapp.com/send?phone=51950276474&text=Hola! quiero hacer un pedido"
           className="whatsapp-link"
@@ -424,7 +430,7 @@ export default function Topbar() {
           950 276 474
         </a>
         <div className="itemContainer2">
-          <DeliveryDiningIcon className="icon" />
+          
           <span>¡Sabores únicos! Ordena en línea.</span>
         </div>
       </div>

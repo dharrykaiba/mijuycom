@@ -1,44 +1,27 @@
 @import "./global.scss";
-
 .App {
   display: flex;
   flex-direction: column;
   background-color: $mainColor;
+  height: 100vh;  // Asegura que el contenedor ocupe toda la pantalla
 
   .sections {
     flex-grow: 1;
-    overflow-y: auto; // Cambié 'scroll' por 'auto' para permitir el desplazamiento solo cuando sea necesario
-    scroll-snap-type: y mandatory;
-    height: 100vh;
+    overflow-y: auto;  // Permitir desplazamiento solo cuando sea necesario
 
-    /* Personalizar el scroll */
+    /* Personalización del scrollbar */
     &::-webkit-scrollbar {
-      width: 8px; /* Establecer el ancho del scrollbar */
+      width: 8px; 
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $accentColor; /* Color del thumb del scrollbar */
-      border-radius: 10px; /* Bordes redondeados */
-    }
-
-    &::-webkit-scrollbar-track {
-      background-color: $grayColor; /* Color del fondo del track */
+      background-color: $accentColor;  // Color del pulgar (thumb)
       border-radius: 10px;
     }
 
-    & > * {
-      scroll-snap-align: start;
-      
-    }
-
-    /* No es necesario manipular el scroll de las siguientes secciones */
-    & > *:first-child {
-      height: 100vh;
-    }
-
-    & > *:nth-child(2),
-    & > *:nth-child(3) {
-      min-height: 100vh;
+    &::-webkit-scrollbar-track {
+      background-color: $grayColor;  // Color del track (fondo)
+      border-radius: 10px;
     }
   }
 }

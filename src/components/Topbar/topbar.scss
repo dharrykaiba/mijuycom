@@ -7,13 +7,13 @@
   right: 0;
   z-index: 10;
   background: linear-gradient(90deg, #dc052b, #f29300);
-  padding: 10px 20px;
+  padding: 20px; // Ajustado para coincidir con la carta
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #fff;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
+
   flex-wrap: wrap;
 
   .logo {
@@ -35,6 +35,10 @@
     color: #fff;
     margin-left: 20px;
     flex-wrap: wrap;
+
+    span {
+      margin-right: 10px; // Ajusta el valor según el espacio deseado
+    }
   }
 
   .whatsapp-link {
@@ -49,7 +53,7 @@
   .icon {
     display: flex;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 5px;
     font-size: 20px;
   }
 
@@ -66,11 +70,21 @@
 
   .itemContainer2 span {
     font-size: 16px;
-    margin-left: 10px;
+    margin-left: 2px;
     display: inline-block;
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .whatsapp-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    .icon {
+      margin-right: 5px;
+    }
   }
 
   /* Estilos para la versión móvil */
@@ -78,7 +92,7 @@
     .topbar {
       flex-direction: column;
       align-items: flex-start;
-      padding: 10px; /* Ajustamos el padding para móviles */
+      padding: 30px; /* Ajustamos el padding para móviles */
     }
 
     .logo {
@@ -86,8 +100,8 @@
     }
 
     .itemContainer {
-      margin-top: 10px;
-      font-size: 14px; /* Reducimos el tamaño de la fuente */
+      margin-top: 5px;
+      font-size: 12px; /* Reducimos el tamaño de la fuente */
       justify-content: flex-start;
     }
 

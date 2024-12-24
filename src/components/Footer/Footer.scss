@@ -2,34 +2,103 @@
 
 .footer {
   width: 100%;
-  background-color: #1d1d1b;  // Color base más oscuro para que resalte el logo y el texto
+  background-color: $mainColor;
   color: $whiteColor;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+  padding: 20px 15px;
+  box-sizing: border-box;
 
-.footer-section {
-  margin: 10px;
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
 
-  h4 {
-    margin-bottom: 10px;
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
-  p, a {
-    font-size: 14px;
-    color: $whiteColor;
-  }
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
 
-  a {
-    text-decoration: underline;
-  }
+    h4 {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
 
-  .footer-logo {
-    width: 120px;  // Un poco más grande para mejorar la visibilidad
-    margin-bottom: 10px;
+    p,
+    a {
+      font-size: 14px;
+      color: $whiteColor;
+      margin: 5px 0;
+    }
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: $highlightColor;
+      }
+    }
+
+    .footer-logo {
+      width: 100px;
+      margin-bottom: 10px;
+
+      @include mobile {
+        width: 80px;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      align-items: center; /* Asegura que los íconos estén centrados verticalmente */
+
+      @include mobile {
+        justify-content: center; /* Centra los íconos horizontalmente */
+        width: 100%; /* Asegura que el contenedor tenga el 100% del ancho */
+      }
+
+      .social-icon {
+        font-size: 30px;
+        color: $whiteColor;
+        transition: transform 0.3s ease, color 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+          color: $highlightColor;
+        }
+      }
+    }
+
+    .reclamaciones-link {
+      display: flex;
+      flex-direction: column;
+      
+      gap: 10px;
+
+      .reclamaciones-img {
+        width: 80px;
+        height: auto;
+        margin-bottom: -5px;
+        @include mobile {
+          margin-left: auto;  /* Asegura que la imagen esté centrada */
+          margin-right: auto; /* Asegura que la imagen esté centrada */
+          }
+      }
+    }
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
   }
 }

@@ -1,0 +1,77 @@
+@import "../../global.scss";
+
+.privacy-policy {
+  padding: 95px 25px;
+  background-color: $grayColor; // Gris claro para el fondo
+  color: $mainColor; // Color de texto base (oscuro)
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  .title {
+    text-align: center;
+    color: $secondaryColor;
+    font-size: 2.5rem; /* Tamaño de fuente mayor */
+    margin-bottom: 1.5rem; /* Separación del título con el contenido */
+    font-weight: bold;
+  }
+
+  h1,
+  h2 {
+    color: $secondaryColor; // Rojo de los encabezados
+    font-weight: bold;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    line-height: 1.6;
+    margin: 1rem 0;
+    color: $lineColor; // Color gris oscuro para el texto
+  }
+
+  ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    padding-left: 0;
+
+    li {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      color: $mainColor;
+      position: relative;
+      padding-left: 25px; // espacio extra para los íconos
+
+      &::before {
+        content: "•"; // Marcadores personalizados
+        color: $secondaryColor; // Rojo para los puntos
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 1.3rem;
+      }
+
+      /* Solución para evitar scrollbars pequeños */
+      overflow: hidden;
+      white-space: nowrap; /* Para evitar que el texto se desborde */
+      text-overflow: ellipsis; /* Agregar puntos suspensivos si el texto es demasiado largo */
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    max-width: 100%;
+  }
+}

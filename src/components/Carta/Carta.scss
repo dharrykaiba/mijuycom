@@ -1,33 +1,83 @@
 @import "../../global.scss";
-
 .carta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 84px 20px;
   background-color: $whiteColor;
-  margin-top: 80px;
+  gap: 10px;
+  margin-bottom: 0;
 
-  h2 {
-    margin-bottom: 20px;
-    color: $lineColor;
-  }
-
-  .platosContainer {
+  .filterButtons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 
-    .plato {
-      background-color: #f5f5f5;  // Un gris claro o un tono beige cálido
+    button {
+      padding: 12px 20px;
+      font-size: 14px;
+      border: none;
+      background-color: $grayColor;
+      color: $mainColor;
+      cursor: pointer;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  // Sombra más suave para mayor profundidad
+      font-weight: bold;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $buttonHoverColor;
+        color: $whiteColor;
+      }
+
+      &.active {
+        background-color: $accentColor;
+        color: $whiteColor;
+      }
+    }
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      button {
+        width: auto;
+        font-size: 18px;
+        padding: 8px 10px;
+      }
+    }
+  }
+
+  .promocionesContainer {
+    width: 100%;
+    background-color: $highlightColor;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    h2 {
+      text-align: center;
+      color: $whiteColor;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .platosContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .plato.promocion {
+      background-color: #f8f8f8;
+      border: 2px solid $highlightColor;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 15px;
       width: 250px;
       text-align: center;
-      transition: transform 0.3s ease-in-out;  // Añadir una animación sutil al pasar el mouse
-  
+      transition: transform 0.3s ease-in-out;
 
       img {
         max-width: 100%;
@@ -47,14 +97,74 @@
       a {
         display: inline-block;
         margin-top: 10px;
-        background-color: $accentColor;
-        color: $whiteColor;
         padding: 10px 15px;
         text-decoration: none;
         border-radius: 5px;
+        color: $whiteColor;
+
+        &.ordenar {
+          background-color: green;
+        }
+
+        &.consultar {
+          background-color: orange;
+        }
 
         &:hover {
-          transform: translateY(-10px);  // Efecto hover para mejorar la interacción visual
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+
+  .platosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .plato {
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+
+      img {
+        max-width: 100%;
+        max-height: 200px;
+        border-radius: 8px;
+      }
+
+      h3 {
+        color: $lineColor;
+      }
+
+      .precio {
+        color: $secondaryColor;
+        font-weight: bold;
+      }
+
+      a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 5px;
+        color: $whiteColor;
+
+        &.ordenar {
+          background-color: green;
+        }
+
+        &.consultar {
+          background-color: orange;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
         }
       }
     }
@@ -62,6 +172,5 @@
 
   .space {
     height: 300px;
-   
   }
 }
