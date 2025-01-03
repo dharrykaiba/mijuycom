@@ -8,7 +8,7 @@ export default function Carta() {
   const [selectedType, setSelectedType] = useState("");
 
   useEffect(() => {
-    fetch("/data/platos.json")
+    fetch("/data/platos2025.json")
       .then((response) => response.json())
       .then((data) => {
         // Filtrar los platos vigentes y ordenar para mostrar los de promoción primero
