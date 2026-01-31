@@ -1,4 +1,5 @@
 @import "../../global.scss";
+
 .carta {
   display: flex;
   flex-direction: column;
@@ -48,6 +49,8 @@
       }
     }
   }
+
+  /* ================= PROMOCIONES ================= */
 
   .promocionesContainer {
     width: 100%;
@@ -106,16 +109,20 @@
           background-color: green;
         }
 
-        &.consultar {
-          background-color: orange;
-        }
-
         &:hover {
           transform: translateY(-5px);
         }
       }
+
+      /* 🔴 Promoción agotada */
+      &.no-disponible {
+        opacity: 0.55;
+        pointer-events: none;
+      }
     }
   }
+
+  /* ================= PLATOS NORMALES ================= */
 
   .platosContainer {
     display: flex;
@@ -159,15 +166,30 @@
           background-color: green;
         }
 
-        &.consultar {
-          background-color: orange;
-        }
-
         &:hover {
           transform: translateY(-5px);
         }
       }
+
+      /* 🔴 Plato agotado */
+      &.no-disponible {
+        opacity: 0.55;
+      }
     }
+  }
+
+  /* ================= BOTÓN AGOTADO ================= */
+
+  button.agotado {
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: 100%;
+    background-color: #ccc;
+    color: #555;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: not-allowed;
   }
 
   .space {

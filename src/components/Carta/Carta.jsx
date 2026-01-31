@@ -1,4 +1,3 @@
-//Carta/Carta.jsx
 import React, { useState, useEffect } from "react";
 import "./Carta.scss";
 
@@ -11,12 +10,12 @@ export default function Carta() {
     fetch("/data/platos2025.json")
       .then((response) => response.json())
       .then((data) => {
-        // Filtrar los platos vigentes y ordenar para mostrar los de promoción primero
         const sortedData = data
-          .filter((plato) => plato.vigente) // Filtra los platos vigentes
-          .sort((a, b) => (b.promocion ? 1 : 0) - (a.promocion ? 1 : 0)); // Ordena por promoción (true primero)
+          .filter((plato) => plato.vigente)
+          .sort((a, b) => (b.promocion ? 1 : 0) - (a.promocion ? 1 : 0));
+
         setData(sortedData);
-        setFilteredData(sortedData); // Establecer los platos filtrados
+        setFilteredData(sortedData);
       })
       .catch((error) => console.error("Error al cargar el JSON:", error));
   }, []);
@@ -25,16 +24,39 @@ export default function Carta() {
     setSelectedType(type);
     setFilteredData(
       data
-        .filter((plato) => plato.vigente && (type === "" || plato.tipo === type)) // Filtrar por tipo y vigencia
-        .sort((a, b) => (b.promocion ? 1 : 0) - (a.promocion ? 1 : 0)) // Ordenar por promoción
+        .filter(
+          (plato) => plato.vigente && (type === "" || plato.tipo === type)
+        )
+        .sort((a, b) => (b.promocion ? 1 : 0) - (a.promocion ? 1 : 0))
     );
   };
 
-  const promociones = filteredData.filter((plato) => plato.promocion); // Filtrar platos en promoción
+  const promociones = filteredData.filter((plato) => plato.promocion);
+
+  const renderBoton = (plato) => {
+    if (plato.stock <= 1) {
+      return (
+        <button className="agotado" disabled>
+          No disponible
+        </button>
+      );
+    }
+
+    return (
+      <a
+        href={plato.link}
+        target="_blank"
+        rel="noreferrer"
+        className="ordenar"
+      >
+        Ordenar ahora
+      </a>
+    );
+  };
 
   return (
     <div className="carta" id="carta">
-      {/* Botones para filtrar */}
+      {/* Filtros */}
       <div className="filterButtons">
         <button
           className={selectedType === "" ? "active" : ""}
@@ -48,7 +70,6 @@ export default function Carta() {
         >
           Alitas
         </button>
-        
         <button
           className={selectedType === "Hamburguesas" ? "active" : ""}
           onClick={() => handleFilter("Hamburguesas")}
@@ -61,28 +82,25 @@ export default function Carta() {
         >
           Salchipapas
         </button>
-        
       </div>
 
-      {/* Platos en Promoción, solo se muestra si existen */}
+      {/* Promociones */}
       {promociones.length > 0 && (
         <div className="promocionesContainer">
           <h2>Platos en Promoción</h2>
           <div className="platosContainer">
             {promociones.map((plato) => (
-              <div key={plato.id} className="plato promocion">
+              <div
+                key={plato.id}
+                className={`plato promocion ${
+                  plato.stock <= 1 ? "no-disponible" : ""
+                }`}
+              >
                 <img src={plato.img} alt={plato.title} />
                 <h3>{plato.title}</h3>
                 <p>{plato.desc}</p>
                 <p className="precio">Precio: S/ {plato.precio}</p>
-                <a
-                  href={plato.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={plato.stock <= 1 ? "consultar" : "ordenar"}
-                >
-                  {plato.stock <= 1 ? "Consultar Pedido" : "Ordenar Ahora"}
-                </a>
+                {renderBoton(plato)}
               </div>
             ))}
           </div>
@@ -92,26 +110,23 @@ export default function Carta() {
       {/* Platos regulares */}
       <div className="platosContainer">
         {filteredData
-          .filter((plato) => !plato.promocion) // Filtrar platos regulares
+          .filter((plato) => !plato.promocion)
           .map((plato) => (
-            <div key={plato.id} className="plato">
+            <div
+              key={plato.id}
+              className={`plato ${
+                plato.stock <= 1 ? "no-disponible" : ""
+              }`}
+            >
               <img src={plato.img} alt={plato.title} />
               <h3>{plato.title}</h3>
               <p>{plato.desc}</p>
               <p className="precio">Precio: S/ {plato.precio}</p>
-              <a
-                href={plato.link}
-                target="_blank"
-                rel="noreferrer"
-                className={plato.stock <= 1 ? "consultar" : "ordenar"}
-              >
-                {plato.stock <= 1 ? "Consultar Pedido" : "Ordenar Ahora"}
-              </a>
+              {renderBoton(plato)}
             </div>
           ))}
       </div>
 
-      {/* Espacio adicional al final de la carta */}
       <div className="space"></div>
     </div>
   );

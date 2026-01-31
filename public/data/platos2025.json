@@ -35,7 +35,7 @@
     "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una porcion de %2AAlitas Acevichadas%2A 🌶️ para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
     "tipo": "Alitas",
     "vigente": true,
-    "stock": 99,
+    "stock": 0,
     "promocion": false
   },
   {
@@ -48,7 +48,7 @@
     "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa Clasica%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
     "tipo": "Hamburguesas",
     "vigente": true,
-    "stock": 99,
+    "stock": 0,
     "promocion": false
   },
   {
@@ -61,7 +61,7 @@
     "link": "https://api.whatsapp.com/send?phone=51950276474&text=Hola! dame una %2AHamburguesa con Doble de Carne%2A para llevar.%0ACon cremas Mayonesa Ketchup Mostaza Aji Aceituna.%0APago con Yape o Efectivo.",
     "tipo": "Hamburguesas",
     "vigente": true,
-    "stock": 99,
+    "stock": 0,
     "promocion": false
   },
   {

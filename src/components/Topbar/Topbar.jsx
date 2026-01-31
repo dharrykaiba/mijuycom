@@ -1,5 +1,5 @@
 import React from "react";
-import "./Topbar.scss";
+import "./topbar.scss";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Link } from "react-router-dom"; // Importa Link de react-router-dom
